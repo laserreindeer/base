@@ -1,0 +1,18 @@
+devDependencies:
+  '@types/node': 10.12.21
+  '@types/prettier': 1.15.2
+packages:
+  /@types/node/10.12.21:
+    dev: true
+    resolution:
+      integrity: sha512-CBgLNk4o3XMnqMc0rhb6lc77IwShMEglz05deDcn2lQxyXEZivfwgYJu7SMha9V5XcrP6qZuevTHV/QrN2vjKQ==
+  /@types/prettier/1.15.2:
+    dev: true
+    resolution:
+      integrity: sha512-XIB0ZCaFZmWUHAa9dBqP5UKXXHwuukmVlP+XcyU94dui2k+l2lG+CHAbt2ffenHPUqoIs5Beh8Pdf2YEq/CZ7A==
+registry: 'https://registry.npmjs.org/'
+shrinkwrapMinorVersion: 9
+shrinkwrapVersion: 3
+specifiers:
+  '@types/node': ^10.12.21
+  '@types/prettier': ^1.15.2
