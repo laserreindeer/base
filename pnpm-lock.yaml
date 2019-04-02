@@ -1,0 +1,26 @@
+dependencies:
+  tslint-config-prettier: 1.18.0
+devDependencies:
+  '@types/node': 11.13.0
+  '@types/prettier': 1.16.1
+lockfileVersion: 5
+packages:
+  /@types/node/11.13.0:
+    dev: true
+    resolution:
+      integrity: sha512-rx29MMkRdVmzunmiA4lzBYJNnXsW/PhG4kMBy2ATsYaDjGGR75dCFEVVROKpNwlVdcUX3xxlghKQOeDPBJobng==
+  /@types/prettier/1.16.1:
+    dev: true
+    resolution:
+      integrity: sha512-db6pZL5QY3JrlCHBhYQzYDci0xnoDuxfseUuguLRr3JNk+bnCfpkK6p8quiUDyO8A0vbpBKkk59Fw125etrNeA==
+  /tslint-config-prettier/1.18.0:
+    dev: false
+    engines:
+      node: '>=4.0.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-xPw9PgNPLG3iKRxmK7DWr+Ea/SzrvfHtjFt5LBl61gk2UBG/DB9kCXRjv+xyIU1rUtnayLeMUVJBcMX8Z17nDg==
+specifiers:
+  '@types/node': ^11.13.0
+  '@types/prettier': ^1.16.1
+  tslint-config-prettier: ^1.18.0
