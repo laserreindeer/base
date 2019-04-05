@@ -1,14 +1,20 @@
+import { Configuration } from "stylelint";
+
 /**
  * Stylelint settings.
- * @type {import("stylelint").Configuration}
  */
-module.exports = {
+export const stylelintConfig: Configuration = {
+	defaultSeverity: "error",
 	extends: "stylelint-config-standard",
+	ignoreFiles: [],
 	plugins: [
 		"stylelint-order"
 	],
+	processors: [],
 	rules: {
 		indentation: "tab",
 		"order/properties-alphabetical-order": true
 	}
 };
+
+export default stylelintConfig;
