@@ -2,7 +2,7 @@
  * Prettier settings.
  * @type {import("prettier").Options}
  */
-exports.default = {
+module.exports = {
 	arrowParens: "avoid",
 	bracketSpacing: true,
 	endOfLine: "lf",

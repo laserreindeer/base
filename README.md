@@ -9,3 +9,4 @@
 - TSLint configuration.
 - Prettier configuration.
 - Editorconfig configuration.
+- Stylelint configuration.

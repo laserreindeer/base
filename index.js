@@ -1,1 +1,2 @@
-exports.prettierConfig = require("./prettier.config.js").default;
+exports.prettierConfig = require("./prettier.config.js");
+exports.stylelintConfig = require("./stylelint.config.js");
