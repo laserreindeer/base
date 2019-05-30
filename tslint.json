@@ -74,7 +74,7 @@
     "no-empty-interface": true,
     "no-empty": true,
     "no-eval": true,
-    "no-implicit-dependencies": [true, ["worker-loader!."]],
+    "no-implicit-dependencies": [true, "dev"],
     "no-import-side-effect": false,
     "no-inferrable-types": false,
     "no-internal-module": true,

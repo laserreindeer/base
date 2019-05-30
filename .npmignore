@@ -1,0 +1,6 @@
+.editorconfig
+prettier.config.js
+README.md
+src
+tsconfig.cjs.json
+tsconfig.esm.json
