@@ -12,13 +12,19 @@
 - Stylelint configuration.
 - TSLint configuration.
 
-## Dependencies
+## Usage
 
-```bash
-npm i -D prettier @types/prettier stylelint @types/stylelint tslint
+To import `.editorconfig` and `.gitignore` simply run:
+
+```sh
+cp ./node_modules/@vangware/vangstyle/.{editorconfig,gitignore} .
 ```
 
-## Usage
+First install `devDependencies`. You can use `yarn` or `pnpm` too!
+
+```bash
+npm i -D prettier @types/prettier stylelint @types/stylelint stylelint-config-standard stylelint-order tslib tslint tslint-config-prettier
+```
 
 This module exports `prettierConfig` and `stylelintConfig` to be imported as follows:
 
@@ -36,10 +42,4 @@ To import the `TSLint` configs, do as follows:
 {
   "extends": "@vangware/vangstyle/tslint"
 }
-```
-
-To import `.editorconfig` and `.gitignore` simply run:
-
-```sh
-cp ./node_modules/@vangware/vangstyle/.{editorconfig,gitignore} .
 ```

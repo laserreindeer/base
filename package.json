@@ -1,7 +1,7 @@
 {
   "name": "@vangware/vangstyle",
   "description": "Vangware shared styles, linting and formating",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -9,8 +9,14 @@
   "bugs": {
     "url": "https://github.com/vangware/vangstyle/issues"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@types/node": "^12.0.8",
+    "@types/prettier": "^1.16.4",
+    "@types/stylelint": "^9.10.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.17",
     "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-order": "^3.0.0",
@@ -18,14 +24,6 @@
     "tslint": "^5.17.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.5.2"
-  },
-  "devDependencies": {
-    "@types/node": "^12.0.8",
-    "@types/prettier": "^1.16.4",
-    "@types/stylelint": "^9.10.0",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^7.0.17",
-    "rimraf": "^2.6.3"
   },
   "files": [
     "/cjs",
