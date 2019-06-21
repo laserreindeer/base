@@ -1,6 +1,6 @@
 # @vangware/vangstyle
 
-![](https://i.imgur.com/Y0FMZDv.png)
+![Vangstyle logo](https://i.imgur.com/Y0FMZDv.png)
 
 [Vangware](https://vangware.com) shared styles, linting and formating.
 
@@ -11,6 +11,12 @@
 - Prettier configuration.
 - Stylelint configuration.
 - TSLint configuration.
+
+## Dependencies
+
+```bash
+npm i -D prettier @types/prettier stylelint @types/stylelint tslint
+```
 
 ## Usage
 
