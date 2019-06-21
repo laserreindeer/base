@@ -14,19 +14,19 @@
 
 ## Usage
 
-To import `.editorconfig` and `.gitignore` simply run:
+First import `.editorconfig` and `.gitignore` simply run:
 
 ```sh
 cp ./node_modules/@vangware/vangstyle/.{editorconfig,gitignore} .
 ```
 
-First install `devDependencies`. You can use `yarn` or `pnpm` too!
+Then install `devDependencies`. You can use `yarn` or `pnpm` too!
 
 ```bash
 npm i -D prettier @types/prettier stylelint @types/stylelint stylelint-config-standard stylelint-order tslib tslint tslint-config-prettier
 ```
 
-This module exports `prettierConfig` and `stylelintConfig` to be imported as follows:
+After that, you can import `prettierConfig` and `stylelintConfig` from `@vangware/vangstyle`:
 
 ```js
 // prettier.config.js
@@ -36,7 +36,7 @@ module.exports = require("@vangware/vangstyle").prettierConfig;
 module.exports = require("@vangware/vangstyle").stylelintConfig;
 ```
 
-To import the `TSLint` configs, do as follows:
+Finally, import the `TSLint` configs as follows:
 
 ```json
 {
