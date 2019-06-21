@@ -5,11 +5,9 @@ import { Configuration } from "stylelint";
  */
 export const stylelintConfig: Configuration = {
 	defaultSeverity: "error",
-	extends: "stylelint-config-standard",
+	extends: "stylelint-prettier/recommended",
 	ignoreFiles: [],
-	plugins: [
-		"stylelint-order"
-	],
+	plugins: ["stylelint-order"],
 	processors: [],
 	rules: {
 		indentation: "tab",

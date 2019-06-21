@@ -23,7 +23,7 @@ cp ./node_modules/@vangware/vangstyle/.{editorconfig,gitignore} .
 Then install `devDependencies`. You can use `yarn` or `pnpm` too!
 
 ```bash
-npm i -D prettier @types/prettier stylelint @types/stylelint stylelint-config-standard stylelint-order tslib tslint tslint-config-prettier
+npm i -D prettier @types/prettier stylelint @types/stylelint stylelint-prettier stylelint-config-prettier stylelint-order tslib tslint tslint-config-prettier
 ```
 
 After that, you can import `prettierConfig` and `stylelintConfig` from `@vangware/vangstyle`:
