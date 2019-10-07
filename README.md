@@ -12,21 +12,19 @@
 - Stylelint configuration.
 - TSLint configuration.
 
-## Usage
-
-First import `.editorconfig` and `.gitignore` simply run:
+## Copy `.editorconfig`, `.gitignore` and `.prettierignore`
 
 ```sh
-cp ./node_modules/@vangware/vangstyle/.{editorconfig,gitignore} .
+cp ./node_modules/@vangware/vangstyle/.{editorconfig,gitignore,prettierignore} .
 ```
 
-Then install `devDependencies`. You can use `yarn` or `pnpm` too!
+## Install development dependencies
+
+### Full
 
 ```bash
 npm i -D prettier @types/prettier stylelint @types/stylelint stylelint-prettier stylelint-config-prettier stylelint-order tslib tslint tslint-config-prettier
 ```
-
-After that, you can import `prettierConfig` and `stylelintConfig` from `@vangware/vangstyle`:
 
 ```js
 // prettier.config.js
@@ -36,10 +34,41 @@ module.exports = require("@vangware/vangstyle").prettierConfig;
 module.exports = require("@vangware/vangstyle").stylelintConfig;
 ```
 
-Finally, import the `TSLint` configs as follows:
-
 ```json
+// tslint.json
 {
   "extends": "@vangware/vangstyle/tslint"
 }
+```
+
+### TypeScript only
+
+```bash
+npm i -D prettier @types/prettier tslib tslint tslint-config-prettier
+```
+
+```js
+// prettier.config.js
+module.exports = require("@vangware/vangstyle").prettierConfig;
+```
+
+```json
+// tslint.json
+{
+  "extends": "@vangware/vangstyle/tslint"
+}
+```
+
+### Without TypeScript
+
+```bash
+npm i -D prettier @types/prettier stylelint @types/stylelint stylelint-prettier stylelint-config-prettier stylelint-order
+```
+
+```js
+// prettier.config.js
+module.exports = require("@vangware/vangstyle").prettierConfig;
+
+// stylelint.config.js
+module.exports = require("@vangware/vangstyle").stylelintConfig;
 ```
