@@ -1,0 +1,14 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.formatOnSave": true,
+  "cSpell.words": [
+    "editorconfig",
+    "prettierignore",
+    "stylelint",
+    "tslib",
+    "Vangstyle",
+    "Vangware"
+  ]
+}
