@@ -1,13 +1,14 @@
 {
   "name": "@vangware/vangstyle",
   "description": "Vangware shared styles, linting and formating",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
   },
   "bin": {
-    "vangstyle": "./cjs/bin.js"
+    "vangstyle": "./dist/vangstyle.js",
+    "vgs": "./dist/vangstyle.js"
   },
   "bugs": {
     "url": "https://github.com/vangware/vangstyle/issues"
@@ -16,66 +17,76 @@
     "minimist": "^1.2.0"
   },
   "devDependencies": {
+    "@types/eslint": "^6.1.3",
     "@types/minimist": "^1.2.0",
-    "@types/node": "^12.12.6",
-    "@types/prettier": "1.18.3",
-    "@types/stylelint": "9.10.1",
+    "@types/node": "^12.12.7",
+    "@types/prettier": "^1.18.3",
+    "@types/stylelint": "^9.10.1",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-ban": "^1.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-no-null": "^1.0.2",
+    "eslint-plugin-prefer-arrow": "^1.1.6",
+    "eslint-plugin-prettier": "^3.1.1",
     "npm-run-all": "^4.1.5",
-    "postcss": "^7.0.21",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "rimraf": "3.0.0",
     "stylelint": "^11.1.1",
-    "stylelint-config-prettier": "6.0.0",
-    "stylelint-order": "3.1.1",
+    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-order": "^3.1.1",
     "stylelint-prettier": "^1.1.1",
-    "tslib": "^1.10.0",
-    "tslint": "^5.20.1",
-    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.7.2"
   },
   "files": [
-    "/.editorconfig",
-    "/.gitignore",
-    "/.prettierignore",
-    "/.vscode",
-    "/cjs",
-    "/configs",
-    "/esm",
-    "/package-lock.json",
-    "/pnpm-lock.yaml",
-    "/tslint.json",
-    "/yarn.lock"
+    ".vscode/",
+    "configs/",
+    "dist/"
   ],
   "homepage": "https://github.com/vangware/vangstyle#readme",
   "keywords": [
+    "eslint",
+    "eslintconfig",
     "format",
     "linting",
+    "prettier",
     "settings",
     "style",
+    "stylelint",
     "vangstyle",
     "vangware"
   ],
   "license": "MIT",
-  "main": "./cjs/index.js",
-  "module": "./esm/index.js",
+  "main": "./dist/index.js",
   "peerDependencies": {
-    "@types/prettier": "1.18.3",
-    "prettier": "^1.18.2"
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-ban": "^1.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-no-null": "^1.0.2",
+    "eslint-plugin-prefer-arrow": "^1.1.6",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2",
+    "stylelint": "^11.1.1",
+    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-order": "^3.1.1",
+    "stylelint-prettier": "^1.1.1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vangware/vangstyle.git"
   },
   "scripts": {
-    "clean": "rimraf ./{cjs,esm}",
-    "compile": "run-s compile:*",
-    "compile:cjs": "tsc --project ./tsconfig.cjs.json",
-    "compile:esm": "tsc --project ./tsconfig.esm.json",
-    "prepublishOnly": "run-s clean compile:* prettify:*",
-    "prettify": "run-s prettify:*",
-    "prettify:cjs": "prettier --config ./prettier.config.js --write './cjs/**/*.{js,ts}'",
-    "prettify:esm": "prettier --config ./prettier.config.js --write './esm/**/*.{js,ts}'"
+    "clean": "rimraf ./dist",
+    "compile": "tsc --project ./tsconfig.json",
+    "lint": "eslint ./src/*.ts",
+    "prepublishOnly": "run-s clean compile prettify",
+    "prettify": "prettier --config ./.prettierrc.js --write './dist/**/*.{js,ts}'"
   },
   "source": "./src/index.ts",
-  "types": "./esm/index.d.ts"
+  "types": "./dist/index.d.ts"
 }

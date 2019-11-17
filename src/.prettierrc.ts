@@ -1,9 +1,6 @@
 import { Options } from "prettier";
 
-/**
- * Prettier settings.
- */
-export const prettierConfig: Options = {
+export default {
 	arrowParens: "avoid",
 	bracketSpacing: true,
 	endOfLine: "lf",
@@ -17,7 +14,4 @@ export const prettierConfig: Options = {
 	tabWidth: 4,
 	trailingComma: "none",
 	useTabs: true
-};
-
-export default prettierConfig;
-
+} as Options;

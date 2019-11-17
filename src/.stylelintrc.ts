@@ -1,9 +1,6 @@
 import { Configuration } from "stylelint";
 
-/**
- * Stylelint settings.
- */
-export const stylelintConfig: Configuration = {
+export default {
 	defaultSeverity: "error",
 	extends: "stylelint-prettier/recommended",
 	ignoreFiles: [],
@@ -13,6 +10,4 @@ export const stylelintConfig: Configuration = {
 		indentation: "tab",
 		"order/properties-alphabetical-order": true
 	}
-};
-
-export default stylelintConfig;
+} as Configuration;

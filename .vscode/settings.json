@@ -1,14 +1,28 @@
 {
+  "cSpell.words": [
+    "Vangstyle",
+    "Vangware",
+    "editorconfig",
+    "eslintconfig",
+    "iife",
+    "plusplus",
+    "pnpm",
+    "pnpx",
+    "prettierignore",
+    "stylelint",
+    "stylelintrc",
+    "tslib"
+  ],
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
+  "eslint.autoFixOnSave": true,
   "editor.formatOnSave": true,
-  "cSpell.words": [
-    "editorconfig",
-    "prettierignore",
-    "stylelint",
-    "tslib",
-    "Vangstyle",
-    "Vangware"
-  ]
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.enable": true
 }

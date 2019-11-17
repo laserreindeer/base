@@ -149,7 +149,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # Build
-dist/
-package-lock.json
-pnpm-lock.yaml
-yarn.lock
+cjs
+esm
