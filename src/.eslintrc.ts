@@ -200,7 +200,6 @@ export default {
 		"no-import-side-effect": "off",
 		"no-lone-blocks": "error",
 		"no-loop-func": "error",
-		"no-magic-numbers": "error",
 		"no-multi-spaces": "error",
 		"no-multi-str": "error",
 		"no-multiple-empty-lines": [
@@ -230,6 +229,7 @@ export default {
 		"no-throw-literal": "error",
 		"no-trailing-spaces": "error",
 		"no-undef-init": "error",
+		"no-undef": "off", // TypeScript already takes care of this.
 		"no-underscore-dangle": "error",
 		"no-unmodified-loop-condition": "error",
 		"no-unneeded-ternary": "error",
