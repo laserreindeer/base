@@ -43,7 +43,7 @@ export default {
 				}
 			}
 		],
-		"@typescript-eslint/indent": ["error", "tab"],
+		"@typescript-eslint/indent": "off",
 		"@typescript-eslint/interface-name-prefix": "error",
 		"@typescript-eslint/member-delimiter-style": [
 			"error",
@@ -132,8 +132,6 @@ export default {
 		"guard-for-in": "error",
 		"id-blacklist": [
 			"error",
-			"_", // Sorry, what is this? Use an identifier even if you aren't using it.
-			"any", // Any is bad and you should avoid it!
 			"e", // Write "event", is far clearer than "e".
 			"err", // Write "error", is just 2 more letters.
 			"i", // Use "index" or something more readable than "i".
@@ -154,7 +152,7 @@ export default {
 		"max-len": [
 			"error",
 			{
-				code: 120
+				code: 80
 			}
 		],
 		"max-lines": ["error", 300],

@@ -2,13 +2,17 @@
   "cSpell.words": [
     "Vangstyle",
     "Vangware",
+    "camelcase",
     "editorconfig",
+    "eqeqeq",
     "eslintconfig",
     "iife",
+    "linebreak",
     "plusplus",
     "pnpm",
     "pnpx",
     "prettierignore",
+    "singleline",
     "stylelint",
     "stylelintrc",
     "tslib"
