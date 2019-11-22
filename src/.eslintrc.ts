@@ -152,7 +152,8 @@ export default {
 		"max-len": [
 			"error",
 			{
-				code: 80
+				code: 80,
+				ignorePattern: "// eslint-disable"
 			}
 		],
 		"max-lines": ["error", 300],
