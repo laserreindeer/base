@@ -1,14 +1,14 @@
 {
   "name": "@vangware/vangstyle",
   "description": "Vangware shared styles, linting and formating",
-  "version": "3.0.3",
+  "version": "3.1.0",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
   },
   "bin": {
-    "vangstyle": "./dist/vangstyle.js",
-    "vgs": "./dist/vangstyle.js"
+    "vangstyle": "./cjs/vangstyle.js",
+    "vgs": "./cjs/vangstyle.js"
   },
   "bugs": {
     "url": "https://github.com/vangware/vangstyle/issues"
@@ -42,8 +42,9 @@
   },
   "files": [
     ".vscode/",
+    "cjs/",
     "configs/",
-    "dist/"
+    "esm/"
   ],
   "homepage": "https://github.com/vangware/vangstyle#readme",
   "keywords": [
@@ -59,7 +60,8 @@
     "vangware"
   ],
   "license": "MIT",
-  "main": "./dist/index.js",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.6.1",
     "@typescript-eslint/parser": "^2.6.1",
@@ -81,12 +83,14 @@
     "url": "git+https://github.com/vangware/vangstyle.git"
   },
   "scripts": {
-    "clean": "rimraf ./dist",
-    "compile": "tsc --project ./tsconfig.json",
+    "clean": "rimraf ./{cjs,esm}",
+    "compile": "run-s compile:*",
+    "compile:cjs": "tsc --project ./tsconfig.json",
+    "compile:esm": "tsc --project ./tsconfig.esm.json",
     "lint": "eslint ./src/*.ts",
     "prepublishOnly": "run-s clean compile prettify",
-    "prettify": "prettier --config ./.prettierrc.js --write './dist/**/*.{js,ts}'"
+    "prettify": "prettier --config ./.prettierrc.js --write './{cjs,esm}/**/*.{js,ts}'"
   },
   "source": "./src/index.ts",
-  "types": "./dist/index.d.ts"
+  "types": "./cjs/index.d.ts"
 }

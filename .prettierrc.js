@@ -1,1 +1,1 @@
-module.exports = require("./dist").prettierConfig;
+module.exports = require("./cjs").prettier;

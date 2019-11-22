@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "outDir": "./esm",
+    "target": "ESNext"
+  },
+  "exclude": [
+    "./src/vangstyle.ts"
+  ]
+}
