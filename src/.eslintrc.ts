@@ -153,7 +153,8 @@ export default {
 			"error",
 			{
 				code: 80,
-				ignorePattern: "// eslint-disable"
+				ignorePattern: "// eslint-disable",
+				ignoreRegExpLiterals: true
 			}
 		],
 		"max-lines": ["error", 300],
