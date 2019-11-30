@@ -1,5 +1,12 @@
 #! /usr/bin/env node
 
+/**
+ * This code is really nasty, I could improve it in the future, but for now,
+ * let's disable eslint and keep it simple.
+ */
+
+/* eslint-disable */
+
 import { copyFile, mkdir } from "fs";
 import * as minimist from "minimist";
 import { resolve } from "path";

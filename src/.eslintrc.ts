@@ -10,7 +10,8 @@ export default {
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
 		"prettier/@typescript-eslint",
-		"plugin:prettier/recommended"
+		"plugin:prettier/recommended",
+		"plugin:functional/recommended"
 	],
 	parser: "@typescript-eslint/parser",
 	parserOptions: {
@@ -23,7 +24,8 @@ export default {
 		"eslint-plugin-ban",
 		"eslint-plugin-import",
 		"eslint-plugin-no-null",
-		"eslint-plugin-prefer-arrow"
+		"eslint-plugin-prefer-arrow",
+		"eslint-plugin-functional"
 	],
 	rules: {
 		"@typescript-eslint/adjacent-overload-signatures": "error",
@@ -31,7 +33,7 @@ export default {
 		"@typescript-eslint/ban-types": "error",
 		"@typescript-eslint/class-name-casing": "error",
 		"@typescript-eslint/consistent-type-assertions": "off",
-		"@typescript-eslint/consistent-type-definitions": "error",
+		"@typescript-eslint/consistent-type-definitions": ["error", "type"],
 		"@typescript-eslint/explicit-function-return-type": "off",
 		"@typescript-eslint/explicit-member-accessibility": [
 			"error",
