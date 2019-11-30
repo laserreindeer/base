@@ -26,7 +26,7 @@ pnpm i -D @vangware/vangstyle
 pnpm i -D prettier
 
 # TypeScript peer dependencies:
-pnpm i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-ban eslint-plugin-import eslint-plugin-no-null eslint-plugin-prefer-arrow eslint-plugin-prettier
+pnpm i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-ban eslint-plugin-functional eslint-plugin-import eslint-plugin-no-null eslint-plugin-prefer-arrow eslint-plugin-prettier
 
 # CSS peer dependencies:
 pnpm i -D stylelint stylelint-config-prettier stylelint-order stylelint-prettier
