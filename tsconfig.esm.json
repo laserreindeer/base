@@ -6,6 +6,7 @@
     "target": "ESNext"
   },
   "exclude": [
-    "./src/vangstyle.ts"
+    "./src/vangstyle.ts",
+    "./src/updatePeerDependencies.ts"
   ]
 }
