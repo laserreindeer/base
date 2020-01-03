@@ -135,10 +135,7 @@ export default {
 		"id-blacklist": [
 			"error",
 			"e", // Write "event", is far clearer than "e".
-			"err", // Write "error", is just 2 more letters.
-			"i", // Use "index" or something more readable than "i".
-			"j", // Use "index" or something more readable than "j".
-			"k" // Use "index" or something more readable than "k".
+			"err" // Write "error", is just 2 more letters.
 		],
 		"id-match": "error",
 		"import/no-default-export": "off",
