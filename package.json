@@ -1,7 +1,7 @@
 {
   "name": "@vangware/vangstyle",
   "description": "Vangware shared styles, linting and formating",
-  "version": "4.0.10",
+  "version": "4.0.11",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -26,6 +26,7 @@
     "@typescript-eslint/parser": "^2.15.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
+    "eslint-import-resolver-node": "^0.3.3",
     "eslint-plugin-ban": "^1.4.0",
     "eslint-plugin-functional": "^3.0.1",
     "eslint-plugin-import": "^2.20.0",
@@ -70,6 +71,7 @@
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-ban": "^1.4.0",
     "eslint-plugin-functional": "^3.0.1",
+    "eslint-import-resolver-node": "^0.3.3",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-no-null": "^1.0.2",
     "eslint-plugin-prefer-arrow": "^1.1.7",

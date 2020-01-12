@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.0.11
+
+- :heavy_plus_sign: add `eslint-import-resolver-node`.
+- :bookmark: version bump.
+- :memo: update README.md.
+
 ## 4.0.10
 
 - :arrow_up: dependency upgrade.
