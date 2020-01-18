@@ -111,10 +111,6 @@ export default {
 				name: ["*", "push"]
 			},
 			{
-				message: "Use a template strings instead, like `${value}`.",
-				name: ["*", "toString"]
-			},
-			{
 				message: "Use spread instead, like [newItem, ...array].",
 				name: ["*", "unshift"]
 			}

@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.0.12
+
+- :arrow_up: dependency upgrade.
+- :bookmark: version bump.
+- :wrench: removed `toString` ban (when used with numbers, is kinda useful).
+
 ## 4.0.11
 
 - :heavy_plus_sign: add `eslint-import-resolver-node`.
@@ -70,7 +76,7 @@ This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
 ## 3.1.1
 
-- :wrench: update eslint config to ignore max-len of eslint-ignore comments
+- :wrench: update eslint config to ignore max-len of eslint-ignore comments.
 - :bookmark: version bump.
 
 ## 3.1.0
