@@ -6,7 +6,7 @@
 ![License](https://img.shields.io/npm/l/@vangware/vangstyle?style=flat-square)
 ![Open Issues](https://img.shields.io/github/issues/vangware/vangstyle?style=flat-square)
 
-[Vangware](https://vangware.com) shared styles, linting and formating.
+[Vangware](https://vangware.com) shared styles, linting and formatting.
 
 ## Configurations
 

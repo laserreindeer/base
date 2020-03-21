@@ -1,4 +1,4 @@
-import { Linter } from "eslint";
+import type { Linter } from "eslint";
 
 export default {
 	env: {
@@ -130,9 +130,9 @@ export default {
 		"guard-for-in": "error",
 		"id-blacklist": [
 			"error",
-			"e", // Write "event", is far clearer than "e".
 			"err" // Write "error", is just 2 more letters.
 		],
+		"id-length": "error",
 		"id-match": "error",
 		"import/no-default-export": "off",
 		"import/no-extraneous-dependencies": [
@@ -223,15 +223,15 @@ export default {
 		"no-template-curly-in-string": "error",
 		"no-throw-literal": "error",
 		"no-trailing-spaces": "error",
-		"no-undef-init": "error",
 		"no-undef": "off", // TypeScript already takes care of this.
+		"no-undef-init": "error",
 		"no-underscore-dangle": "error",
 		"no-unmodified-loop-condition": "error",
 		"no-unneeded-ternary": "error",
+		"no-unused-expressions": "error",
 		"no-useless-call": "error",
 		"no-useless-concat": "error",
 		"no-useless-return": "error",
-		"no-unused-expressions": "error",
 		"no-var": "error",
 		"object-shorthand": "error",
 		"one-var": ["error", "never"],

@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.1.0
+
+- :arrow_up: dependency upgrade.
+- :bookmark: version bump.
+- :building_construction: change some imports to typed imports.
+- :truck: rename internal dot files to not include a dot.
+- :building_construction: added "id-length" rule.
+
 ## 4.0.14
 
 - :arrow_up: dependency upgrade.

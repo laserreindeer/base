@@ -1,4 +1,4 @@
-import { Options } from "prettier";
+import type { Options } from "prettier";
 
 export default {
 	arrowParens: "avoid",
@@ -9,6 +9,7 @@ export default {
 	jsxSingleQuote: false,
 	printWidth: 80,
 	proseWrap: "preserve",
+	quoteProps: "as-needed",
 	semi: true,
 	singleQuote: false,
 	tabWidth: 4,

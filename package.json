@@ -1,7 +1,7 @@
 {
   "name": "@vangware/vangstyle",
-  "description": "Vangware shared styles, linting and formating",
-  "version": "4.0.14",
+  "description": "Vangware shared styles, linting and formatting",
+  "version": "4.1.0",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -14,18 +14,18 @@
     "url": "https://github.com/vangware/vangstyle/issues"
   },
   "dependencies": {
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.5"
   },
   "devDependencies": {
     "@types/eslint": "^6.1.8",
     "@types/minimist": "^1.2.0",
-    "@types/node": "^13.7.0",
-    "@types/prettier": "^1.19.0",
+    "@types/node": "^13.9.3",
+    "@types/prettier": "^1.19.1",
     "@types/stylelint": "^9.10.1",
-    "@typescript-eslint/eslint-plugin": "^2.19.0",
-    "@typescript-eslint/parser": "^2.19.0",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
     "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-prettier": "^6.10.1",
     "eslint-import-resolver-node": "^0.3.3",
     "eslint-plugin-ban": "^1.4.0",
     "eslint-plugin-functional": "^3.0.1",
@@ -34,13 +34,13 @@
     "eslint-plugin-prefer-arrow": "^1.1.7",
     "eslint-plugin-prettier": "^3.1.2",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.19.1",
-    "rimraf": "^3.0.1",
-    "stylelint": "^13.0.0",
+    "prettier": "^2.0.1",
+    "rimraf": "^3.0.2",
+    "stylelint": "^13.2.1",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-order": "^4.0.0",
     "stylelint-prettier": "^1.1.2",
-    "typescript": "^3.7.5"
+    "typescript": "^3.8.3"
   },
   "files": [
     ".vscode/",
@@ -65,10 +65,10 @@
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.19.0",
-    "@typescript-eslint/parser": "^2.19.0",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
     "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-prettier": "^6.10.1",
     "eslint-import-resolver-node": "^0.3.3",
     "eslint-plugin-ban": "^1.4.0",
     "eslint-plugin-functional": "^3.0.1",
@@ -76,8 +76,8 @@
     "eslint-plugin-no-null": "^1.0.2",
     "eslint-plugin-prefer-arrow": "^1.1.7",
     "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1",
-    "stylelint": "^13.0.0",
+    "prettier": "^2.0.1",
+    "stylelint": "^13.2.1",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-order": "^4.0.0",
     "stylelint-prettier": "^1.1.2"

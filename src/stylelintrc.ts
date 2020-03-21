@@ -1,4 +1,4 @@
-import { Configuration } from "stylelint";
+import type { Configuration } from "stylelint";
 
 export default {
 	defaultSeverity: "error",
