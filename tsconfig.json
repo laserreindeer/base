@@ -3,19 +3,19 @@
     "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "listEmittedFiles": true,
-    "module": "commonjs",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "newLine": "LF",
-    "noEmitOnError": true,
+    "noEmitOnError": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "./cjs",
     "preserveConstEnums": true,
     "strict": true,
     "suppressImplicitAnyIndexErrors": true,
-    "target": "es2015"
+    "target": "es2019"
   },
   "include": [
-    "./src/*.ts"
+    "./src/**/*.ts"
   ]
 }

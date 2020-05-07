@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from "fs";
 import { resolve } from "path";
 
 const encoding = "utf8";
-const path = resolve(__dirname, "../package.json");
+const path = resolve(__dirname, "../../package.json");
 const file = readFileSync(path, encoding);
 const data = JSON.parse(file);
 const update = JSON.stringify(
@@ -21,4 +21,4 @@ const update = JSON.stringify(
 	2
 );
 
-export default writeFileSync(path, update);
+export default writeFileSync(path, `${update}\n`);

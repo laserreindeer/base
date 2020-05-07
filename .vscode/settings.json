@@ -15,6 +15,7 @@
     "singleline",
     "stylelint",
     "stylelintrc",
+    "taskify",
     "tslib"
   ],
   "editor.codeActionsOnSave": {

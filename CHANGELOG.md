@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.2.0
+
+- :arrow_up: dependency upgrade.
+- :building_construction: changed the code completely for `vgs`/`vangstyle`.
+- :memo: update README.md.
+- :sparkles: add CLI UI to make installation easier.
+- :wrench: update "id-length" rule to allow _ only (to be used when parameters are needed).
+
 ## 4.1.0
 
 - :arrow_up: dependency upgrade.

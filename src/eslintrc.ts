@@ -132,7 +132,7 @@ export default {
 			"error",
 			"err" // Write "error", is just 2 more letters.
 		],
-		"id-length": "error",
+		"id-length": ["error", { exceptions: ["_"] }],
 		"id-match": "error",
 		"import/no-default-export": "off",
 		"import/no-extraneous-dependencies": [
@@ -217,6 +217,7 @@ export default {
 		"no-shadow": [
 			"error",
 			{
+				allow: ["_"],
 				hoist: "all"
 			}
 		],

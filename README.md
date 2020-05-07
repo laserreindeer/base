@@ -37,14 +37,10 @@ pnpm i -D stylelint stylelint-config-prettier stylelint-order stylelint-prettier
 Both `vgs` and `vangstyle` commands can be used
 
 ```sh
-pnpx vgs all # Copy everything
-pnpx vgs editorconfig # Copy .editorconfig
-pnpx vgs eslint # Copy .eslintrc.js
-pnpx vgs gitignore # Copy .gitignore
-pnpx vgs prettier # Copy .prettierrc.js and .prettierignore
-pnpx vgs stylelint # Copy .stylelintrc.js
+pnpx vgs # Opens the CLI UI and lets you choose what to install.
+pnpx vangstyle # Alias of the above command.
 ```
 
 ## Future improvements
 
-Add `vgs init` to create a base project.
+Make the CLI UI install above mentioned dependencies.
