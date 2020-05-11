@@ -16,31 +16,51 @@
 - [.prettierrc.js](https://prettier.io/): Code beautify.
 - [.stylelintrc.js](https://stylelint.io/): CSS linting.
 
-## Installation (pnpm, yarn or npm can be used)
+## Installation
+
+`pnpm` or `yarn` can be used instead of `npm`.
+
+### Main installation
 
 ```bash
-# Main installation:
-pnpm i -D @vangware/vangstyle
+npm i -D @vangware/vangstyle
+```
 
-# Shared peer dependencies:
-pnpm i -D prettier
+### Peer dependency installation
+
+Run `vgs` or `vangstyle` and select "Add dependencies to package.json":
+
+```bash
+npx vgs
+# or
+npx vangstyle
+```
+
+After that, `install` needs to be run:
+
+```bash
+npm i
+```
+
+### Manual peer dependency installation
+
+```bash
+# Required peer dependencies:
+npm i -D prettier
 
 # TypeScript peer dependencies:
-pnpm i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-import-resolver-node eslint-plugin-ban eslint-plugin-functional eslint-plugin-import eslint-plugin-no-null eslint-plugin-prefer-arrow eslint-plugin-prettier
+npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-import-resolver-node eslint-plugin-ban eslint-plugin-functional eslint-plugin-import eslint-plugin-no-null eslint-plugin-prefer-arrow eslint-plugin-prettier
 
 # CSS peer dependencies:
-pnpm i -D stylelint stylelint-config-prettier stylelint-order stylelint-prettier
+npm i -D stylelint stylelint-config-prettier stylelint-order stylelint-prettier
 ```
 
-## Copy files (pnpx, yarn or npx can be used)
+### Copy configurations
 
-Both `vgs` and `vangstyle` commands can be used
+Run `vgs` or `vangstyle` and select "Copy configuration files":
 
-```sh
-pnpx vgs # Opens the CLI UI and lets you choose what to install.
-pnpx vangstyle # Alias of the above command.
+```bash
+npx vgs
+# or
+npx vangstyle
 ```
-
-## Future improvements
-
-Make the CLI UI install above mentioned dependencies.
