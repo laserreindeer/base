@@ -1,13 +1,15 @@
-import arrayZip from "./arrayZip";
-import copyFileRecursivePromise from "./copyFileRecursivePromise";
+import { arrayZip } from "./arrayZip";
+import { copyFileRecursivePromise } from "./copyFileRecursivePromise";
 
-export const copyFilesRecursivePromise = (sources: readonly string[] = []) => (
-	targets: readonly string[] = []
-) =>
-	Promise.all(
-		arrayZip(sources)(targets).map(([source, target]) =>
-			copyFileRecursivePromise(source)(target)
-		)
-	);
-
-export default copyFilesRecursivePromise;
+/**
+ * Copies several files recursively.
+ * @param sources List of source paths of files to be copied.
+ */
+export const copyFilesRecursivePromise = (sources: readonly string[] = []) =>
+	/** @param targets List of target paths of files to be copied. */
+	(targets: readonly string[] = []) =>
+		Promise.all(
+			arrayZip(sources)(targets).map(([source, target]) =>
+				copyFileRecursivePromise(source)(target)
+			)
+		);

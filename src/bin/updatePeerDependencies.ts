@@ -1,24 +1,16 @@
-import { readFileSync, writeFileSync } from "fs";
 import { resolve } from "path";
+import { Package } from "./Package";
+import { vangstylePath } from "./paths";
+import { updateJSONPromise } from "./updateJSONPromise";
 
-const encoding = "utf8";
-const path = resolve(__dirname, "../../package.json");
-const file = readFileSync(path, encoding);
-const data = JSON.parse(file);
-const update = JSON.stringify(
-	{
-		...data,
-		peerDependencies: Object.keys(data.peerDependencies).reduce(
-			(peerDependencies, peerDependency) => ({
-				...peerDependencies,
-				[peerDependency]: data.devDependencies[peerDependency]
-			}),
-			{}
-		)
-	},
-	// eslint-disable-next-line no-null/no-null
-	null,
-	2
-);
-
-export default writeFileSync(path, `${update}\n`);
+export default updateJSONPromise<Package>(vangstyle => ({
+	...vangstyle,
+	peerDependencies: Object.fromEntries(
+		Object.keys(vangstyle.peerDependencies).map(peerDependency => [
+			peerDependency,
+			vangstyle.devDependencies[peerDependency]
+		])
+	)
+}))(resolve(vangstylePath, "package.json"))
+	.then(_ => console.log("Peer dependencies updated!"))
+	.catch(console.error);

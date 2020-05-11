@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.3.0
+
+- :bookmark: version bump.
+- :sparkles: add new option to include peer dependencies in current project.
+- :bug: Fixed bug in installation of Prettier.
+
 ## 4.2.1
 
 - :bookmark: version bump.

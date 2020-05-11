@@ -11,6 +11,7 @@
     "noUnusedParameters": true,
     "outDir": "./cjs",
     "preserveConstEnums": true,
+    "resolveJsonModule": true,
     "strict": true,
     "suppressImplicitAnyIndexErrors": true,
     "target": "es2019"

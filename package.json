@@ -1,7 +1,7 @@
 {
   "name": "@vangware/vangstyle",
   "description": "Vangware shared styles, linting and formatting",
-  "version": "4.2.1",
+  "version": "4.3.0",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -46,7 +46,7 @@
   "files": [
     ".vscode/",
     "cjs/",
-    "configs/",
+    "configurations/",
     "esm/"
   ],
   "homepage": "https://github.com/vangware/vangstyle#readme",
