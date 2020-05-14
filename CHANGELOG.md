@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.3.2
+
+- :bookmark: version bump.
+- :arrow_up: dependency upgrade.
+
 ## 4.3.1
 
 - :bookmark: version bump.

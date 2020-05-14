@@ -1,7 +1,7 @@
 {
   "name": "@vangware/vangstyle",
   "description": "Vangware shared styles, linting and formatting",
-  "version": "4.3.1",
+  "version": "4.3.2",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -20,11 +20,11 @@
     "@types/eslint": "^6.8.0",
     "@types/inquirer": "^6.5.0",
     "@types/minimist": "^1.2.0",
-    "@types/node": "^13.13.5",
+    "@types/node": "^14.0.1",
     "@types/prettier": "^2.0.0",
     "@types/stylelint": "^9.10.1",
-    "@typescript-eslint/eslint-plugin": "^2.32.0",
-    "@typescript-eslint/parser": "^2.32.0",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-import-resolver-node": "^0.3.3",
@@ -41,7 +41,7 @@
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-order": "^4.0.0",
     "stylelint-prettier": "^1.1.2",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.2"
   },
   "files": [
     ".vscode/",
@@ -66,8 +66,8 @@
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.32.0",
-    "@typescript-eslint/parser": "^2.32.0",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-import-resolver-node": "^0.3.3",
