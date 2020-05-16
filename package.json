@@ -1,7 +1,7 @@
 {
   "name": "@vangware/vangstyle",
   "description": "Vangware shared styles, linting and formatting",
-  "version": "4.3.2",
+  "version": "4.3.3",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -17,7 +17,7 @@
     "inquirer": "^7.1.0"
   },
   "devDependencies": {
-    "@types/eslint": "^6.8.0",
+    "@types/eslint": "^6.8.1",
     "@types/inquirer": "^6.5.0",
     "@types/minimist": "^1.2.0",
     "@types/node": "^14.0.1",
