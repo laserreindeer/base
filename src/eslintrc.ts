@@ -44,6 +44,7 @@ export default {
 				}
 			}
 		],
+		"@typescript-eslint/explicit-module-boundary-types": "off",
 		"@typescript-eslint/indent": "off",
 		"@typescript-eslint/member-delimiter-style": [
 			"error",

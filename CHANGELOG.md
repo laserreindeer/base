@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.3.7
+
+- :bookmark: version bump.
+- :alien: disabled `@typescript-eslint/explicit-module-boundary-types`.
+
 ## 4.3.6
 
 - :bookmark: version bump.
