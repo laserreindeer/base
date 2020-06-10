@@ -1,7 +1,5 @@
 {
   "cSpell.words": [
-    "Vangstyle",
-    "Vangware",
     "camelcase",
     "editorconfig",
     "eqeqeq",
@@ -16,7 +14,10 @@
     "stylelint",
     "stylelintrc",
     "taskify",
-    "tslib"
+    "tslib",
+    "Vangstyle's",
+    "Vangstyle",
+    "Vangware"
   ],
   "editor.codeActionsOnSave": {
     "source.organizeImports": true,

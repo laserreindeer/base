@@ -30,12 +30,10 @@ const configurations = {
 };
 
 // TODO: Maybe make this less lengthy
-export default new Promise((resolveValidDirectory, rejectValidDirectory) =>
+export default new Promise((resolveDirectory, rejectDirectory) =>
 	cwdPath !== vangstylePath
-		? resolveValidDirectory()
-		: rejectValidDirectory(
-				"This script shouldn't be run in vangstyle's directory"
-		  )
+		? resolveDirectory()
+		: rejectDirectory("Script shouldn't be run in Vangstyle's directory")
 )
 	.then(_ =>
 		prompt<{ readonly action: string }>([
