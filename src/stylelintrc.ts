@@ -1,6 +1,9 @@
 import type { Configuration } from "stylelint";
 
-export default {
+/**
+ * Stylelint configuration.
+ */
+export const stylelint: Configuration = {
 	defaultSeverity: "error",
 	extends: "stylelint-prettier/recommended",
 	ignoreFiles: [],
@@ -10,4 +13,6 @@ export default {
 		indentation: "tab",
 		"order/properties-alphabetical-order": true
 	}
-} as Configuration;
+};
+
+export default stylelint;

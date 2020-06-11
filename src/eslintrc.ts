@@ -1,6 +1,9 @@
 import type { Linter } from "eslint";
 
-export default {
+/**
+ * ESLint configuration.
+ */
+export const eslint: Linter.Config = {
 	env: {
 		browser: true,
 		es6: true,
@@ -261,4 +264,6 @@ export default {
 		"wrap-iife": ["error", "inside"],
 		yoda: "error"
 	}
-} as Linter.Config;
+};
+
+export default eslint;

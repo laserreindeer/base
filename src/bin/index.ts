@@ -2,6 +2,7 @@
 
 import { prompt } from "inquirer";
 import { sep } from "path";
+import logo from "../logo";
 import {
 	editorconfig,
 	eslint,
@@ -32,7 +33,7 @@ const configurations = {
 // TODO: Maybe make this less lengthy
 export default new Promise((resolveDirectory, rejectDirectory) =>
 	cwdPath !== vangstylePath
-		? resolveDirectory()
+		? resolveDirectory(console.log(logo))
 		: rejectDirectory("Script shouldn't be run in Vangstyle's directory")
 )
 	.then(_ =>
