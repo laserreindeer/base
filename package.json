@@ -1,7 +1,7 @@
 {
   "name": "@vangware/vangstyle",
   "description": "Vangware shared styles, linting and formatting",
-  "version": "4.3.9",
+  "version": "4.3.10",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -14,17 +14,17 @@
     "url": "https://github.com/vangware/vangstyle/issues"
   },
   "dependencies": {
-    "inquirer": "^7.1.0"
+    "inquirer": "^7.2.0"
   },
   "devDependencies": {
-    "@types/eslint": "^6.8.1",
+    "@types/eslint": "^7.2.0",
     "@types/inquirer": "^6.5.0",
     "@types/minimist": "^1.2.0",
     "@types/node": "^14.0.13",
     "@types/prettier": "^2.0.1",
     "@types/stylelint": "^9.10.1",
-    "@typescript-eslint/eslint-plugin": "^3.2.0",
-    "@typescript-eslint/parser": "^3.2.0",
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-import-resolver-node": "^0.3.3",
@@ -33,7 +33,7 @@
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-no-null": "^1.0.2",
     "eslint-plugin-prefer-arrow": "^1.2.1",
-    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-prettier": "^3.1.4",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
@@ -66,8 +66,8 @@
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.2.0",
-    "@typescript-eslint/parser": "^3.2.0",
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-import-resolver-node": "^0.3.3",
@@ -76,7 +76,7 @@
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-no-null": "^1.0.2",
     "eslint-plugin-prefer-arrow": "^1.2.1",
-    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.0.5",
     "stylelint": "^13.6.0",
     "stylelint-config-prettier": "^8.0.1",
