@@ -3,6 +3,15 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.4.0
+
+- :bookmark: version bump.
+- :arrow_up: dependency upgrade.
+- :sparkles: add generic strict tsconfig.json.
+- :memo: update `README.md`.
+- :fire: inquirer.
+- :heavy_plus_sign: add prompts.
+
 ## 4.3.10
 
 - :bookmark: version bump.
