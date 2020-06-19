@@ -9,11 +9,11 @@
     "noEmitOnError": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "./cjs",
+    "outDir": "./dist",
     "preserveConstEnums": true,
     "resolveJsonModule": true,
     "strict": true,
-    "target": "es2019"
+    "target": "ESNext"
   },
   "include": [
     "./src/**/*.ts"

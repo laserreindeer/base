@@ -10,11 +10,12 @@
 
 ## Configurations
 
-- [.editorconfig](https://editorconfig.org/): Editor formatting.
-- [.eslintrc.js](https://eslint.org/): JS/TS linting.
-- [.gitignore](https://gitignore.io/): Commonly ignored files and directories for git.
-- [.prettierrc.js](https://prettier.io/): Code beautify.
-- [.stylelintrc.js](https://stylelint.io/): CSS linting.
+- :memo: [.editorconfig](https://editorconfig.org/): Editor formatting.
+- :rotating_light: [.eslintrc.js](https://eslint.org/): JS/TS linting.
+- :see_no_evil: [.gitignore](https://gitignore.io/): Commonly ignored files and directories for git.
+- :sparkles: [.prettierrc.js](https://prettier.io/): Code beautify.
+- :art: [.stylelintrc.js](https://stylelint.io/): CSS linting.
+- :label: [tsconfig.json](http://typescriptlang.org/): TypeScript config.
 
 ## Installation
 

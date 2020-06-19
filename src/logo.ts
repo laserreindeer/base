@@ -7,6 +7,6 @@ export const logo = `${BigInt(
 	f75bd64779da0cb59752689da3fbbd048ccd994e75c7fc4560d831fe29f7d2df92737bdf174a
 	7c8ca80c1dc1f168a0df07b6b326ee6bae9bc556c64b7e93cbb11c2f00708d05678b32ad73f9
 	9509931ce59c9a854e77787bebf35d32ec73fd5`.replace(/\n\t/gu, "")
-)}`.replace(/./gu, index => " _|/\\\n"[index]);
+)}`.replace(/./gu, index => " _|/\\\n"[parseInt(index, 10)]);
 
 export default logo;

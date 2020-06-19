@@ -9,6 +9,7 @@ import {
 	git,
 	prettier,
 	stylelint,
+	typescript,
 	vscode
 } from "./configurations";
 import type { Package } from "./Package";
@@ -26,6 +27,7 @@ const configurations = {
 	EditorConfig: editorconfig,
 	Git: git,
 	Prettier: prettier,
+	TypeScript: typescript,
 	"Visual Studio Code": vscode,
 	stylelint
 };
@@ -37,7 +39,7 @@ export default new Promise((resolveDirectory, rejectDirectory) =>
 		: rejectDirectory("Script shouldn't be run in Vangstyle's directory")
 )
 	.then(_ =>
-		prompt<{ readonly action: string }>([
+		prompt<{ readonly action: "addDependencies" | "copyConfigurations" }>([
 			{
 				choices: [
 					{

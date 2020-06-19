@@ -39,3 +39,8 @@ export const vscode: Configuration = targetDirectory =>
 	copyFilesRecursivePromise([
 		resolve(vangstylePath, ".vscode/settings.json")
 	])([resolve(targetDirectory, ".vscode/settings.json")]);
+
+export const typescript: Configuration = targetDirectory =>
+	copyFilesRecursivePromise([resolve(configurationsPath, "tsconfig.json")])([
+		resolve(targetDirectory, "tsconfig.json")
+	]);
