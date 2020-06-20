@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.4.1
+
+- :sparkles: Add temporary new `prettify-esm` bin, to add `.js` to esm files imports and exports.
+- :bookmark: version bump.
+
 ## 4.4.0
 
 - :bookmark: version bump.

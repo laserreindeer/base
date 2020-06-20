@@ -1,12 +1,13 @@
 {
   "name": "@vangware/vangstyle",
   "description": "Vangware shared styles, linting and formatting",
-  "version": "4.4.0",
+  "version": "4.4.1",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
   },
   "bin": {
+    "prettify-esm": "./cjs/bin/prettifyESM.js",
     "vangstyle": "./cjs/bin/index.js",
     "vgs": "./cjs/bin/index.js"
   },
@@ -99,7 +100,9 @@
     "lint": "eslint ./src/*.ts",
     "peer": "node ./cjs/bin/updatePeerDependencies.js",
     "prepublishOnly": "run-s clean compile prettify peer",
-    "prettify": "prettier --config ./.prettierrc.js --write './{cjs,esm}/**/*.{js,ts}'"
+    "prettify": "run-s prettify:*",
+    "prettify:esm": "node ./cjs/bin/prettifyESM.js ./esm",
+    "prettify:prettier": "prettier --config ./.prettierrc.js --write './{cjs,esm}/**/*.{js,ts}'"
   },
   "source": "./src/index.ts",
   "types": "./cjs/index.d.ts"
