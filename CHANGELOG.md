@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.4.3
+
+- :bug: fix `prettify-esm` to only affect relative paths.
+
 ## 4.4.2
 
 - :bookmark: version bump.

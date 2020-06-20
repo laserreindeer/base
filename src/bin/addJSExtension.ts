@@ -8,7 +8,7 @@ export const addJSExtension = (filename: string) =>
 			? writeFilePromise(
 					filename,
 					data.replace(
-						/(?<prepend>(?:import|export)\s+.*\s+from\s+")(?<path>.*)(?=")/gu,
+						/(?<prepend>(?:import|export)\s+.*\s+from\s+"(?=\.|\/))(?<path>.*)(?=")/gu,
 						"$1$2.js"
 					)
 			  ).then(_ => console.log(`${filename} prettified!`))
