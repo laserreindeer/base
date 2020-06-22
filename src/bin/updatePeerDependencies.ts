@@ -1,16 +1,16 @@
 import { resolve } from "path";
 import { Package } from "./Package";
-import { vangstylePath } from "./paths";
+import { basePath } from "./paths";
 import { updateJSONPromise } from "./updateJSONPromise";
 
-export default updateJSONPromise<Package>(vangstyle => ({
-	...vangstyle,
+export default updateJSONPromise<Package>(base => ({
+	...base,
 	peerDependencies: Object.fromEntries(
-		Object.keys(vangstyle.peerDependencies).map(peerDependency => [
+		Object.keys(base.peerDependencies).map(peerDependency => [
 			peerDependency,
-			vangstyle.devDependencies[peerDependency]
+			base.devDependencies[peerDependency]
 		])
 	)
-}))(resolve(vangstylePath, "package.json"))
+}))(resolve(basePath, "package.json"))
 	.then(_ => console.log("Peer dependencies updated!"))
 	.catch(console.error);

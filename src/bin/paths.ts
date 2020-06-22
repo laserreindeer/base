@@ -1,10 +1,10 @@
 import { resolve } from "path";
 
-/** Vangstyle installation path */
-export const vangstylePath = resolve(__dirname, "../..");
+/** @vangware/base installation path */
+export const basePath = resolve(__dirname, "../..");
 
 /** Configuration files path */
-export const configurationsPath = resolve(vangstylePath, "./configurations");
+export const configurationsPath = resolve(basePath, "./configurations");
 
 /** Current working directory path */
 export const cwdPath = process.cwd();
@@ -12,5 +12,9 @@ export const cwdPath = process.cwd();
 /** Current working directory package.json file */
 export const cwdPackagePath = resolve(cwdPath, "package.json");
 
-/** Vangstyle package.json file */
-export const vangstylePackagePath = resolve(vangstylePath, "package.json");
+/** @vangware/base package.json file */
+export const basePackagePath = resolve(basePath, "package.json");
+
+/** Resolver for configurationsPath */
+export const resolveConfigurationsPath = (filename: string) =>
+	resolve(configurationsPath, filename);
