@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 1.0.1
+
+- :building_construction: because now we have a script to install peer dependencies, they are no longer enforced by package.json.
+
 ## 1.0.0
 
 - :truck: rename package from `@vangware/vangstyle` to `@vangware/base`.

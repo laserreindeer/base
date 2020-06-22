@@ -1,7 +1,7 @@
 {
   "name": "@vangware/base",
   "description": "Vangware shared styles, linting and formatting",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -69,24 +69,6 @@
   "license": "MIT",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
-  "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.4.0",
-    "@typescript-eslint/parser": "^3.4.0",
-    "eslint": "^7.3.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-import-resolver-node": "^0.3.4",
-    "eslint-plugin-ban": "^1.5.1",
-    "eslint-plugin-functional": "^3.0.1",
-    "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-no-null": "^1.0.2",
-    "eslint-plugin-prefer-arrow": "^1.2.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.0.5",
-    "stylelint": "^13.6.1",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-order": "^4.1.0",
-    "stylelint-prettier": "^1.1.2"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vangware/base.git"
@@ -97,8 +79,7 @@
     "compile:cjs": "tsc --project ./tsconfig.json",
     "compile:esm": "tsc --project ./tsconfig.esm.json",
     "lint": "eslint ./src/*.ts",
-    "peer": "node ./cjs/bin/updatePeerDependencies.js",
-    "prepublishOnly": "run-s clean compile prettify peer",
+    "prepublishOnly": "run-s clean compile prettify",
     "prettify": "run-s prettify:*",
     "prettify:esm": "node ./cjs/bin/prettifyESM.js ./esm",
     "prettify:prettier": "prettier --config ./.prettierrc.js --write './{cjs,esm}/**/*.{js,ts}'"
