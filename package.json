@@ -1,7 +1,7 @@
 {
   "name": "@vangware/base",
   "description": "Vangware shared styles, linting and formatting",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -41,11 +41,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.1.2",
-    "typescript": "^3.9.5"
-  },
-  "exports": {
-    "import": "./esm/index.js",
-    "require": "./cjs/index.js"
+    "typescript": "^3.9.6"
   },
   "files": [
     ".vscode/",
