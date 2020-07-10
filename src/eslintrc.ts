@@ -259,7 +259,14 @@ export const eslint: Linter.Config = {
 		"require-await": "error",
 		"require-unicode-regexp": "error",
 		"sort-keys": "error",
-		"space-before-function-paren": ["error", "never"],
+		"space-before-function-paren": [
+			"error",
+			{
+				anonymous: "never",
+				asyncArrow: "always",
+				named: "never"
+			}
+		],
 		"spaced-comment": "error",
 		"wrap-iife": ["error", "inside"],
 		yoda: "error"
