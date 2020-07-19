@@ -1,7 +1,7 @@
 {
   "name": "@vangware/base",
   "description": "Vangware shared styles, linting and formatting",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -14,6 +14,7 @@
     "url": "https://github.com/vangware/base/issues"
   },
   "dependencies": {
+    "husky": "^4.2.5",
     "prompts": "^2.3.2"
   },
   "devDependencies": {
@@ -25,7 +26,7 @@
     "@types/stylelint": "^9.10.1",
     "@typescript-eslint/eslint-plugin": "^3.6.1",
     "@typescript-eslint/parser": "^3.6.1",
-    "eslint": "^7.4.0",
+    "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-plugin-ban": "^1.5.1",
@@ -50,7 +51,13 @@
     "esm/"
   ],
   "homepage": "https://github.com/vangware/base#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "run-s clean compile lint"
+    }
+  },
   "keywords": [
+    "base",
     "eslint",
     "eslintconfig",
     "format",
@@ -59,7 +66,6 @@
     "settings",
     "style",
     "stylelint",
-    "base",
     "vangware"
   ],
   "license": "MIT",

@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 1.0.9
+
+- :arrow_up: dependency upgrade.
+- :wrench: update `package.json` to run linter and pre-compile on commit.
+
 ## 1.0.8
 
 - :arrow_up: dependency upgrade.
