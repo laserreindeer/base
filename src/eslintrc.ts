@@ -150,7 +150,8 @@ export const eslint: Linter.Config = {
 			"error",
 			{
 				code: 80,
-				ignorePattern: "// eslint-disable",
+				// Let's ignore both long import statements and eslint flags
+				ignorePattern: "(^import [^,]+ from)|(// eslint-disable)",
 				ignoreRegExpLiterals: true
 			}
 		],
