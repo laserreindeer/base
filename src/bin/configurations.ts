@@ -1,3 +1,4 @@
+import { readFile } from "fs/promises";
 import { resolve } from "path";
 import { copyFilesRecursivePromise } from "./copyFilesRecursivePromise";
 import { Package } from "./Package";
@@ -7,7 +8,6 @@ import {
 	cwdPackagePath,
 	resolveConfigurationsPath
 } from "./paths";
-import { readFilePromise } from "./readFilePromise";
 import { updateJSONPromise } from "./updateJSONPromise";
 
 export type Configuration = (
@@ -15,7 +15,7 @@ export type Configuration = (
 ) => Promise<readonly { readonly source: string; readonly target: string }[]>;
 
 export const addDevDependencies = (packages: readonly string[]) =>
-	readFilePromise(basePackagePath, "utf8")
+	readFile(basePackagePath, "utf8")
 		.then(JSON.parse)
 		.then(({ devDependencies }: Package) =>
 			updateJSONPromise<Package>(targetPackage => ({

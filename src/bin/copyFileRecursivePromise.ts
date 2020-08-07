@@ -1,7 +1,6 @@
+import { copyFile, mkdir } from "fs/promises";
 import { dirname } from "path";
-import { copyFilePromise } from "./copyFilePromise";
 import { existsPromise } from "./existsPromise";
-import { makeDirectoryPromise } from "./makeDirectoryPromise";
 
 /**
  * Copies a file in a recursively created directory (if it doesn't exists).
@@ -12,6 +11,12 @@ export const copyFileRecursivePromise = (source: string) =>
 	(target: string) =>
 		existsPromise(dirname(target))
 			.then(({ exists, filename }) =>
-				!exists ? makeDirectoryPromise(filename) : { path: filename }
+				!exists
+					? mkdir(filename, { recursive: true }).then(_ => ({
+							path: filename
+					  }))
+					: { path: filename }
 			)
-			.then(_ => copyFilePromise(source)(target));
+			.then(_ =>
+				copyFile(source, target).then(_ => ({ source, target }))
+			);

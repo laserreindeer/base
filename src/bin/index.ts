@@ -2,7 +2,6 @@
 
 import { sep } from "path";
 import * as prompts from "prompts";
-import { PromptObject } from "prompts";
 import logo from "../logo";
 import {
 	Configuration,
@@ -39,7 +38,7 @@ export default new Promise((resolveDirectory, rejectDirectory) =>
 			name: "selected",
 			type: "multiselect"
 			// Had to do this because the types of prompts are outdated.
-		} as unknown) as PromptObject<"selected">)
+		} as unknown) as prompts.PromptObject<"selected">)
 			.then(
 				({
 					selected = []

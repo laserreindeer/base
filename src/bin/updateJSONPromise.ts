@@ -1,6 +1,5 @@
+import { readFile, writeFile } from "fs/promises";
 import { jsonPrettyStringify } from "./jsonPrettyStringify";
-import { readFilePromise } from "./readFilePromise";
-import { writeFilePromise } from "./writeFilePromise";
 
 /**
  * JSON file updater.
@@ -10,6 +9,6 @@ import { writeFilePromise } from "./writeFilePromise";
 export const updateJSONPromise = <ParsedJSON = unknown, Output = ParsedJSON>(
 	update: (data: ParsedJSON) => Output
 ) => (path: string) =>
-	readFilePromise(path, "utf8").then(data =>
-		writeFilePromise(path, jsonPrettyStringify(update(JSON.parse(data))))
+	readFile(path, "utf8").then(data =>
+		writeFile(path, jsonPrettyStringify(update(JSON.parse(data))))
 	);

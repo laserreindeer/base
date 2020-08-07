@@ -1,11 +1,10 @@
-import { readFilePromise } from "./readFilePromise";
-import { writeFilePromise } from "./writeFilePromise";
+import { readFile, writeFile } from "fs/promises";
 
 /** Adds .js extension in imports and exports of given filename. */
 export const addJSExtension = (filename: string) =>
-	readFilePromise(filename, "utf8").then(data =>
+	readFile(filename, "utf8").then(data =>
 		data.match(/(?:import|export)\s*.*\s*from/gu)
-			? writeFilePromise(
+			? writeFile(
 					filename,
 					data.replace(
 						/(?<prepend>(?:import|export)\s*?[\w*\s{},]*\s*from\s*?"(?=\.|\/))(?<path>.*?)(?=")/gu,
