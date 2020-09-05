@@ -22,7 +22,7 @@
 npm i -D @vangware/base
 ```
 
-## Peer dependency installation
+## Peer dependency and configuration installation
 
 ```bash
 npx vangware # Select configurations to install

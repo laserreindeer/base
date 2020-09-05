@@ -13,22 +13,20 @@ import {
 } from "./configurations";
 import { basePath, cwdPath } from "./paths";
 
-const configurations = {
-	CSS: css,
-	EditorConfig: editorconfig,
-	Git: git,
-	Linting: linting,
-	"Visual Studio Code": vscode
-};
-
 export default new Promise((resolveDirectory, rejectDirectory) =>
 	cwdPath !== basePath
 		? resolveDirectory(console.log(logo))
 		: rejectDirectory("Don't run this script in @vangware/base's directory")
 )
 	.then(_ =>
-		prompts(({
-			choices: Object.entries(configurations).map(([title, value]) => ({
+		prompts({
+			choices: Object.entries({
+				CSS: css,
+				EditorConfig: editorconfig,
+				Git: git,
+				Linting: linting,
+				"Visual Studio Code": vscode
+			}).map(([title, value]) => ({
 				title,
 				value
 			})),
@@ -37,8 +35,7 @@ export default new Promise((resolveDirectory, rejectDirectory) =>
 			message: "Configurations",
 			name: "selected",
 			type: "multiselect"
-			// Had to do this because the types of prompts are outdated.
-		} as unknown) as prompts.PromptObject<"selected">)
+		} as prompts.PromptObject<"selected">)
 			.then(
 				({
 					selected = []
