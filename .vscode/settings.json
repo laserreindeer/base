@@ -6,6 +6,7 @@
     "editorconfig",
     "eqeqeq",
     "eslintconfig",
+    "forcli",
     "iife",
     "linebreak",
     "multiselect",

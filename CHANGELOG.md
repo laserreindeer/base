@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 2.0.5
+
+- :arrow_up: dependency upgrade.
+- :art: the logo now looks green thanks to `@vangware/forcli`.
+
 ## 2.0.4
 
 - :pencil2: fix remaining master references.

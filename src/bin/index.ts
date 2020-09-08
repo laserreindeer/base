@@ -1,5 +1,6 @@
 #! /usr/bin/env node
 
+import { greenText } from "@vangware/forcli";
 import { sep } from "path";
 import * as prompts from "prompts";
 import logo from "../logo";
@@ -15,7 +16,7 @@ import { basePath, cwdPath } from "./paths";
 
 export default new Promise((resolveDirectory, rejectDirectory) =>
 	cwdPath !== basePath
-		? resolveDirectory(console.log(logo))
+		? resolveDirectory(console.log(greenText(logo)))
 		: rejectDirectory("Don't run this script in @vangware/base's directory")
 )
 	.then(_ =>
