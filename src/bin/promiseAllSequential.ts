@@ -10,5 +10,5 @@ export const promiseAllSequential = <Argument>(argument: Argument) => <Output>(
 			promise.then(output =>
 				nextPromise(argument).then(data => [...output, data])
 			),
-		promises[0](argument).then(data => [data])
+		promises[0]?.(argument).then(data => [data])
 	);

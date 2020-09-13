@@ -6,7 +6,8 @@ import {
 	basePackagePath,
 	basePath,
 	cwdPackagePath,
-	resolveConfigurationsPath
+	resolveConfigurationsPath,
+	targetDirectoryResolve
 } from "./paths";
 import { updateJSONPromise } from "./updateJSONPromise";
 
@@ -35,7 +36,7 @@ export const addDevDependencies = (packages: readonly string[]) =>
 
 export const editorconfig: Configuration = targetDirectory =>
 	copyFilesRecursivePromise([resolveConfigurationsPath(".editorconfig")])([
-		resolve(targetDirectory, ".editorconfig")
+		targetDirectoryResolve(targetDirectory)(".editorconfig")
 	]);
 
 export const linting: Configuration = targetDirectory =>
@@ -63,16 +64,27 @@ export const linting: Configuration = targetDirectory =>
 			resolveConfigurationsPath(".prettierignore"),
 			resolveConfigurationsPath(".prettierrc.js")
 		])([
-			resolve(targetDirectory, "tsconfig.json"),
-			resolve(targetDirectory, ".eslintrc.js"),
-			resolve(targetDirectory, ".prettierignore"),
-			resolve(targetDirectory, ".prettierrc.js")
+			targetDirectoryResolve(targetDirectory)("tsconfig.json"),
+			targetDirectoryResolve(targetDirectory)(".eslintrc.js"),
+			targetDirectoryResolve(targetDirectory)(".prettierignore"),
+			targetDirectoryResolve(targetDirectory)(".prettierrc.js")
 		])
 	);
 
 export const git: Configuration = targetDirectory =>
 	copyFilesRecursivePromise([resolveConfigurationsPath(".gitignore")])([
-		resolve(targetDirectory, ".gitignore")
+		targetDirectoryResolve(targetDirectory)(".gitignore")
+	]);
+
+export const documents: Configuration = targetDirectory =>
+	copyFilesRecursivePromise([
+		resolveConfigurationsPath("LICENSE"),
+		resolveConfigurationsPath("CHANGELOG.md"),
+		resolveConfigurationsPath("README.md")
+	])([
+		targetDirectoryResolve(targetDirectory)("LICENSE"),
+		targetDirectoryResolve(targetDirectory)("CHANGELOG.md"),
+		targetDirectoryResolve(targetDirectory)("README.md")
 	]);
 
 export const css: Configuration = targetDirectory =>
@@ -90,13 +102,13 @@ export const css: Configuration = targetDirectory =>
 			resolveConfigurationsPath(".prettierignore"),
 			resolveConfigurationsPath(".prettierrc.js")
 		])([
-			resolve(targetDirectory, ".stylelintrc.js"),
-			resolve(targetDirectory, ".prettierignore"),
-			resolve(targetDirectory, ".prettierrc.js")
+			targetDirectoryResolve(targetDirectory)(".stylelintrc.js"),
+			targetDirectoryResolve(targetDirectory)(".prettierignore"),
+			targetDirectoryResolve(targetDirectory)(".prettierrc.js")
 		])
 	);
 
 export const vscode: Configuration = targetDirectory =>
 	copyFilesRecursivePromise([resolve(basePath, ".vscode/settings.json")])([
-		resolve(targetDirectory, ".vscode/settings.json")
+		targetDirectoryResolve(targetDirectory)(".vscode/settings.json")
 	]);

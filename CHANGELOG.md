@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 2.1.0
+
+- :sparkles: added new "Documents" option.
+
 ## 2.0.6
 
 - :bug: fix issue with race condition while writing to `package.json`.

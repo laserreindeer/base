@@ -1,0 +1,1 @@
+# @vangware/project-name

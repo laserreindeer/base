@@ -7,6 +7,7 @@ import { logo } from "../logo";
 import {
 	Configuration,
 	css,
+	documents,
 	editorconfig,
 	git,
 	linting,
@@ -28,6 +29,7 @@ export default new Promise((resolveDirectory, rejectDirectory) =>
 		prompts({
 			choices: Object.entries({
 				CSS: css,
+				Documents: documents,
 				EditorConfig: editorconfig,
 				Git: git,
 				Linting: linting,

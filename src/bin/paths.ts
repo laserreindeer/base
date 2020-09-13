@@ -18,3 +18,8 @@ export const basePackagePath = resolve(basePath, "package.json");
 /** Resolver for configurationsPath */
 export const resolveConfigurationsPath = (filename: string) =>
 	resolve(configurationsPath, filename);
+
+/** Curried target directory resolve */
+export const targetDirectoryResolve = (targetDirectory: string) => (
+	path: string
+) => resolve(targetDirectory, path);
