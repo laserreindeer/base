@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 2.0.6
+
+- :bug: fix issue with race condition while writing to `package.json`.
+- :arrow_up: dependency upgrade.
+
 ## 2.0.5
 
 - :arrow_up: dependency upgrade.

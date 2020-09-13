@@ -1,9 +1,9 @@
 #! /usr/bin/env node
 
-import { greenText } from "@vangware/forcli";
+import { greenBackground, redText, whiteText } from "@vangware/forcli";
 import { sep } from "path";
 import * as prompts from "prompts";
-import logo from "../logo";
+import { logo } from "../logo";
 import {
 	Configuration,
 	css,
@@ -13,11 +13,16 @@ import {
 	vscode
 } from "./configurations";
 import { basePath, cwdPath } from "./paths";
+import { promiseAllSequential } from "./promiseAllSequential";
+
+const addedMessage = greenBackground(whiteText(" Added "));
 
 export default new Promise((resolveDirectory, rejectDirectory) =>
 	cwdPath !== basePath
-		? resolveDirectory(console.log(greenText(logo)))
-		: rejectDirectory("Don't run this script in @vangware/base's directory")
+		? resolveDirectory(console.log(logo))
+		: rejectDirectory(
+				redText("Don't run this script in @vangware/base's directory")
+		  )
 )
 	.then(_ =>
 		prompts({
@@ -42,20 +47,17 @@ export default new Promise((resolveDirectory, rejectDirectory) =>
 					selected = []
 				}: {
 					readonly selected: readonly Configuration[];
-				}) =>
-					Promise.all(
-						selected.map(configuration => configuration(cwdPath))
-					)
+				}) => promiseAllSequential(cwdPath)(selected)
 			)
 			.then((copiedData = []) =>
 				copiedData
 					.flat()
 					.map(
 						({ target }) =>
-							`${target.replace(
+							`${addedMessage} ${target.replace(
 								`${cwdPath}${sep}`,
 								""
-							)} installed!`
+							)}`
 					)
 			)
 	)
