@@ -9,6 +9,7 @@ import {
 	resolveConfigurationsPath,
 	targetDirectoryResolve
 } from "./paths";
+import { sortObject } from "./sortObject";
 import { updateJSONPromise } from "./updateJSONPromise";
 
 export type Configuration = (
@@ -21,7 +22,7 @@ export const addDevDependencies = (packages: readonly string[]) =>
 		.then(({ devDependencies }: Package) =>
 			updateJSONPromise<Package>(targetPackage => ({
 				...targetPackage,
-				devDependencies: {
+				devDependencies: sortObject({
 					...(targetPackage.devDependencies ?? {}),
 					...Object.fromEntries(
 						Object.entries(
@@ -30,7 +31,7 @@ export const addDevDependencies = (packages: readonly string[]) =>
 							packages.includes(packageName)
 						)
 					)
-				}
+				})
 			}))(cwdPackagePath)
 		);
 

@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 2.2.0
+
+- :building_construction: update `devDependencies` injection to be sorted.
+
 ## 2.1.2
 
 - :arrow_up: dependency upgrade.
