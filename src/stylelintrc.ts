@@ -14,5 +14,3 @@ export const stylelint: Configuration = {
 		"order/properties-alphabetical-order": true
 	}
 };
-
-export default stylelint;

@@ -19,5 +19,3 @@ export const prettier: Options = {
 	trailingComma: "none",
 	useTabs: true
 };
-
-export default prettier;

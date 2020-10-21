@@ -273,5 +273,3 @@ export const eslint: Linter.Config = {
 		yoda: "error"
 	}
 };
-
-export default eslint;
