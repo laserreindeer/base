@@ -1,7 +1,7 @@
 {
   "name": "@vangware/base",
   "description": "Vangware shared styles, linting and formatting",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -14,7 +14,7 @@
     "url": "https://github.com/vangware/base/issues"
   },
   "dependencies": {
-    "@vangware/forcli": "^1.1.8",
+    "@vangware/forcli": "^1.1.9",
     "prompts": "^2.3.2"
   },
   "devDependencies": {
