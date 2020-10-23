@@ -1,7 +1,7 @@
 {
   "name": "@vangware/base",
   "description": "Vangware shared styles, linting and formatting",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -87,7 +87,7 @@
     "compile:esm": "tsc --project ./tsconfig.esm.json",
     "lint": "eslint ./src/*.ts",
     "prepublishOnly": "run-s clean compile prettify",
-    "prettify": "prettier --config ./.prettierrc.js --write './{cjs,esm}/**/*.{js,ts}'"
+    "prettify": "prettier --write './{cjs,esm}/**/*.{js,ts}'"
   },
   "source": "./src/index.ts",
   "types": "./cjs/index.d.ts"

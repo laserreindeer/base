@@ -73,8 +73,12 @@ export const linting: Configuration = targetDirectory =>
 	);
 
 export const git: Configuration = targetDirectory =>
-	copyFilesRecursivePromise([resolveConfigurationsPath(".gitignore")])([
-		targetDirectoryResolve(targetDirectory)(".gitignore")
+	copyFilesRecursivePromise([
+		resolveConfigurationsPath(".gitignore"),
+		resolveConfigurationsPath(".github/workflows/test.yaml")
+	])([
+		targetDirectoryResolve(targetDirectory)(".gitignore"),
+		targetDirectoryResolve(targetDirectory)(".github/workflows/test.yaml")
 	]);
 
 export const documents: Configuration = targetDirectory =>
