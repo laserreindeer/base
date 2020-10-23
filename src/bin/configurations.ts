@@ -1,7 +1,7 @@
 import { readFile } from "fs/promises";
 import { resolve } from "path";
 import { copyFilesRecursivePromise } from "./copyFilesRecursivePromise";
-import { Package } from "./Package";
+import type { Package } from "./Package";
 import {
 	basePackagePath,
 	basePath,
