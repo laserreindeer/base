@@ -7,10 +7,10 @@ export const basePath = resolve(__dirname, "../..");
 export const configurationsPath = resolve(basePath, "./configurations");
 
 /** Current working directory path */
-export const cwdPath = process.cwd();
+export const cwd = process.cwd();
 
 /** Current working directory package.json file */
-export const cwdPackagePath = resolve(cwdPath, "package.json");
+export const cwdPackagePath = resolve(cwd, "package.json");
 
 /** @vangware/base package.json file */
 export const basePackagePath = resolve(basePath, "package.json");

@@ -1,26 +1,24 @@
 {
   "name": "@vangware/base",
   "description": "Vangware shared styles, linting and formatting",
-  "version": "2.2.8",
+  "version": "3.0.0",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
   },
   "bin": {
-    "prettify-esm": "./cjs/bin/prettifyESM.js",
     "vangware": "./cjs/bin/index.js"
   },
   "bugs": {
     "url": "https://github.com/vangware/base/issues"
   },
   "dependencies": {
-    "@vangware/forcli": "^1.1.9",
     "prompts": "^2.3.2"
   },
   "devDependencies": {
     "@types/eslint": "^7.2.4",
     "@types/minimist": "^1.2.0",
-    "@types/node": "^14.14.1",
+    "@types/node": "^14.14.2",
     "@types/prettier": "^2.1.5",
     "@types/prompts": "^2.0.9",
     "@types/stylelint": "^9.10.1",
@@ -89,9 +87,7 @@
     "compile:esm": "tsc --project ./tsconfig.esm.json",
     "lint": "eslint ./src/*.ts",
     "prepublishOnly": "run-s clean compile prettify",
-    "prettify": "run-s prettify:*",
-    "prettify:esm": "node ./cjs/bin/prettifyESM.js ./esm",
-    "prettify:prettier": "prettier --config ./.prettierrc.js --write './{cjs,esm}/**/*.{js,ts}'"
+    "prettify": "prettier --config ./.prettierrc.js --write './{cjs,esm}/**/*.{js,ts}'"
   },
   "source": "./src/index.ts",
   "types": "./cjs/index.d.ts"

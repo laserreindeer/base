@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 3.0.0
+
+- :arrow_up: dependency upgrade.
+- :heavy_minus_sign: remove `@vangware/forcli` so this is truly "base".
+- :fire: removed ASCII logo.
+- :fire: removed esm prettifier.
+
 ## 2.2.8
 
 - :arrow_up: dependency upgrade.

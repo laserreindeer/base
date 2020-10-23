@@ -1,9 +1,7 @@
 #! /usr/bin/env node
 
-import { greenBackground, redText, whiteText } from "@vangware/forcli";
 import { sep } from "path";
 import * as prompts from "prompts";
-import { logo } from "../logo";
 import {
 	Configuration,
 	css,
@@ -13,26 +11,22 @@ import {
 	linting,
 	vscode
 } from "./configurations";
-import { basePath, cwdPath } from "./paths";
+import { basePath, cwd } from "./paths";
 import { promiseAllSequential } from "./promiseAllSequential";
 
-const addedMessage = greenBackground(whiteText(" Added "));
-
 export default new Promise((resolveDirectory, rejectDirectory) =>
-	cwdPath !== basePath
-		? resolveDirectory(console.log(logo))
-		: rejectDirectory(
-				redText("Don't run this script in @vangware/base's directory")
-		  )
+	cwd !== basePath
+		? resolveDirectory()
+		: rejectDirectory("Don't run this script in @vangware/base's directory")
 )
 	.then(_ =>
 		prompts({
 			choices: Object.entries({
-				CSS: css,
-				Documents: documents,
+				"CSS (Stylelint)": css,
+				"Documents (CHANGELOG, LICENSE and README)": documents,
 				EditorConfig: editorconfig,
 				Git: git,
-				Linting: linting,
+				"Linting (ESLint)": linting,
 				"Visual Studio Code": vscode
 			}).map(([title, value]) => ({
 				title,
@@ -49,17 +43,14 @@ export default new Promise((resolveDirectory, rejectDirectory) =>
 					selected = []
 				}: {
 					readonly selected: readonly Configuration[];
-				}) => promiseAllSequential(cwdPath)(selected)
+				}) => promiseAllSequential(cwd)(selected)
 			)
 			.then((copiedData = []) =>
 				copiedData
 					.flat()
 					.map(
 						({ target }) =>
-							`${addedMessage} ${target.replace(
-								`${cwdPath}${sep}`,
-								""
-							)}`
+							`[ Added ] ${target.replace(`${cwd}${sep}`, "")}`
 					)
 			)
 	)
