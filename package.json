@@ -1,7 +1,7 @@
 {
   "name": "@vangware/base",
   "description": "Vangware shared styles, linting and formatting",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -24,7 +24,7 @@
     "@types/stylelint": "^9.10.1",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
-    "eslint": "^7.11.0",
+    "eslint": "^7.12.0",
     "eslint-config-prettier": "^6.14.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-plugin-ban": "^1.5.1",
