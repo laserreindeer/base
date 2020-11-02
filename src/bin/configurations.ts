@@ -19,11 +19,12 @@ export type Configuration = (
 export const addDevDependencies = (packages: readonly string[]) =>
 	readFile(basePackagePath, "utf8")
 		.then(JSON.parse)
-		.then(({ devDependencies }: Package) =>
+		.then(({ devDependencies, version }: Package) =>
 			updateJSONPromise<Package>(targetPackage => ({
 				...targetPackage,
 				devDependencies: sortObject({
 					...(targetPackage.devDependencies ?? {}),
+					"@vangware/base": `^${version}`,
 					...Object.fromEntries(
 						Object.entries(
 							devDependencies
@@ -36,9 +37,11 @@ export const addDevDependencies = (packages: readonly string[]) =>
 		);
 
 export const editorconfig: Configuration = targetDirectory =>
-	copyFilesRecursivePromise([resolveConfigurationsPath(".editorconfig")])([
-		targetDirectoryResolve(targetDirectory)(".editorconfig")
-	]);
+	addDevDependencies([]).then(_ =>
+		copyFilesRecursivePromise([
+			resolveConfigurationsPath(".editorconfig")
+		])([targetDirectoryResolve(targetDirectory)(".editorconfig")])
+	);
 
 export const linting: Configuration = targetDirectory =>
 	addDevDependencies([
@@ -73,24 +76,30 @@ export const linting: Configuration = targetDirectory =>
 	);
 
 export const git: Configuration = targetDirectory =>
-	copyFilesRecursivePromise([
-		resolveConfigurationsPath(".gitignore"),
-		resolveConfigurationsPath(".github/workflows/test.yaml")
-	])([
-		targetDirectoryResolve(targetDirectory)(".gitignore"),
-		targetDirectoryResolve(targetDirectory)(".github/workflows/test.yaml")
-	]);
+	addDevDependencies([]).then(_ =>
+		copyFilesRecursivePromise([
+			resolveConfigurationsPath(".gitignore"),
+			resolveConfigurationsPath(".github/workflows/test.yaml")
+		])([
+			targetDirectoryResolve(targetDirectory)(".gitignore"),
+			targetDirectoryResolve(targetDirectory)(
+				".github/workflows/test.yaml"
+			)
+		])
+	);
 
 export const documents: Configuration = targetDirectory =>
-	copyFilesRecursivePromise([
-		resolveConfigurationsPath("LICENSE"),
-		resolveConfigurationsPath("CHANGELOG.md"),
-		resolveConfigurationsPath("README.md")
-	])([
-		targetDirectoryResolve(targetDirectory)("LICENSE"),
-		targetDirectoryResolve(targetDirectory)("CHANGELOG.md"),
-		targetDirectoryResolve(targetDirectory)("README.md")
-	]);
+	addDevDependencies([]).then(_ =>
+		copyFilesRecursivePromise([
+			resolveConfigurationsPath("LICENSE"),
+			resolveConfigurationsPath("CHANGELOG.md"),
+			resolveConfigurationsPath("README.md")
+		])([
+			targetDirectoryResolve(targetDirectory)("LICENSE"),
+			targetDirectoryResolve(targetDirectory)("CHANGELOG.md"),
+			targetDirectoryResolve(targetDirectory)("README.md")
+		])
+	);
 
 export const css: Configuration = targetDirectory =>
 	addDevDependencies([
@@ -114,6 +123,8 @@ export const css: Configuration = targetDirectory =>
 	);
 
 export const vscode: Configuration = targetDirectory =>
-	copyFilesRecursivePromise([resolve(basePath, ".vscode/settings.json")])([
-		targetDirectoryResolve(targetDirectory)(".vscode/settings.json")
-	]);
+	addDevDependencies([]).then(_ =>
+		copyFilesRecursivePromise([
+			resolve(basePath, ".vscode/settings.json")
+		])([targetDirectoryResolve(targetDirectory)(".vscode/settings.json")])
+	);

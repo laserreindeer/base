@@ -19,12 +19,6 @@
 ## Installation
 
 ```bash
-npm i -D @vangware/base
-```
-
-## Peer dependency and configuration installation
-
-```bash
-npx vangware # Select configurations to install
+npx @vangware/base # Select configurations to install
 npm i # And then run install
 ```

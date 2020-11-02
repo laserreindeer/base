@@ -1,14 +1,12 @@
 {
   "name": "@vangware/base",
   "description": "Vangware shared styles, linting and formatting",
-  "version": "3.0.4",
+  "version": "4.0.0",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
   },
-  "bin": {
-    "vangware": "./cjs/bin/index.js"
-  },
+  "bin": "./cjs/bin/index.js",
   "bugs": {
     "url": "https://github.com/vangware/base/issues"
   },
