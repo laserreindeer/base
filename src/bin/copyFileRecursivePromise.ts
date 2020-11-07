@@ -7,7 +7,9 @@ import { existsPromise } from "./existsPromise";
  * @param source Source path of the file to be copied.
  */
 export const copyFileRecursivePromise = (source: string) =>
-	/** @param target Target path of the file to be copied. */
+	/**
+	 * @param target Target path of the file to be copied.
+	 */
 	(target: string) =>
 		existsPromise(dirname(target))
 			.then(({ exists, filename }) =>

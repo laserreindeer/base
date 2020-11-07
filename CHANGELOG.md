@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.1.0
+
+- :arrow_up: dependency upgrade.
+- :truck: move configuration scripts to their own directory.
+- :memo: formatted better some JSDocs.
+
 ## 4.0.0
 
 - :building_construction: change command from `vangware` to `@vangware/base`.

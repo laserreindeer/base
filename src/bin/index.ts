@@ -2,15 +2,13 @@
 
 import { sep } from "path";
 import * as prompts from "prompts";
-import {
-	Configuration,
-	css,
-	documents,
-	editorconfig,
-	git,
-	linting,
-	vscode
-} from "./configurations";
+import { Configuration } from "./configurations/Configuration";
+import { css } from "./configurations/css";
+import { documents } from "./configurations/documents";
+import { editorconfig } from "./configurations/editorconfig";
+import { git } from "./configurations/git";
+import { linting } from "./configurations/linting";
+import { vscode } from "./configurations/vscode";
 import { basePath, cwd } from "./paths";
 import { promiseAllSequential } from "./promiseAllSequential";
 
