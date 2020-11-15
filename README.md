@@ -5,7 +5,7 @@
 ![Open Issues](https://img.shields.io/github/issues/vangware/base.svg?style=for-the-badge&labelColor=666&color=2b7&link=https://github.com/vangware/base/issues)
 ![Size](https://img.shields.io/bundlephobia/minzip/@vangware/base.svg?style=for-the-badge&labelColor=666&color=2b7&label=size&link=https://bundlephobia.com/result?p=@vangware/base)
 
-[Vangware](https://vangware.com) shared styles, linting and formatting.
+🏗️ [Vangware](https://vangware.com) base configurations.
 
 ## Configurations
 
