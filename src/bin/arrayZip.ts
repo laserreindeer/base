@@ -7,4 +7,6 @@ export const arrayZip = <Item>(source: readonly Item[]) =>
 	 * @param extension Extension array to be zipped
 	 */
 	(extension: readonly Item[]) =>
-		source.map((item, index) => [item, extension[index]] as const);
+		source.map(
+			(item, index) => [item, extension[index]] as readonly [Item, Item]
+		);

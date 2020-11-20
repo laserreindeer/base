@@ -7,7 +7,7 @@ export const promiseAllSequential = <Argument>(argument: Argument) => <Output>(
 ) =>
 	promises.slice(1).reduce(
 		(promise, nextPromise) =>
-			promise.then(output =>
+			promise?.then(output =>
 				nextPromise(argument).then(data => [...output, data])
 			),
 		promises[0]?.(argument).then(data => [data])

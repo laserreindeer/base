@@ -14,7 +14,7 @@ import { promiseAllSequential } from "./promiseAllSequential";
 
 export default new Promise((resolveDirectory, rejectDirectory) =>
 	cwd !== basePath
-		? resolveDirectory()
+		? resolveDirectory(undefined)
 		: rejectDirectory("Don't run this script in @vangware/base's directory")
 )
 	.then(_ =>
