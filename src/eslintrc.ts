@@ -81,7 +81,11 @@ export const eslint: Linter.Config = {
 		"@typescript-eslint/prefer-for-of": "error",
 		"@typescript-eslint/prefer-function-type": "error",
 		"@typescript-eslint/prefer-namespace-keyword": "error",
-		"@typescript-eslint/quotes": ["error", "double"],
+		"@typescript-eslint/quotes": [
+			"error",
+			"double",
+			{ allowTemplateLiterals: true, avoidEscape: false }
+		],
 		"@typescript-eslint/semi": ["error", "always"],
 		"@typescript-eslint/space-within-parens": ["off", "never"],
 		"@typescript-eslint/triple-slash-reference": "error",

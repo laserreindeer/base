@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.1.4
+
+- :wrench: update `@typescript-eslint/quotes` config to behave better with prettier.
+
 ## 4.1.3
 
 - :arrow_up: dependency upgrade.
