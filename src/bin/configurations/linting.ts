@@ -24,9 +24,9 @@ export const linting: Configuration = targetDirectory =>
 	]).then(_ =>
 		copyFilesRecursivePromise([
 			resolveConfigurationsPath("tsconfig.json"),
-			resolveConfigurationsPath(".eslintrc.js"),
-			resolveConfigurationsPath(".prettierignore"),
-			resolveConfigurationsPath(".prettierrc.js")
+			resolveConfigurationsPath("_eslintrc.js"),
+			resolveConfigurationsPath("_prettierignore"),
+			resolveConfigurationsPath("_prettierrc.js")
 		])([
 			targetDirectoryResolve(targetDirectory)("tsconfig.json"),
 			targetDirectoryResolve(targetDirectory)(".eslintrc.js"),

@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.2.0
+
+- :truck: rename dot files to start with an underscore.
+
 ## 4.1.11
 
 - :arrow_up: dependency upgrade.

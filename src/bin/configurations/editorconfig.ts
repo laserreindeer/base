@@ -6,6 +6,6 @@ import { Configuration } from "./Configuration";
 export const editorconfig: Configuration = targetDirectory =>
 	addDevDependencies([]).then(_ =>
 		copyFilesRecursivePromise([
-			resolveConfigurationsPath(".editorconfig")
+			resolveConfigurationsPath("_editorconfig")
 		])([targetDirectoryResolve(targetDirectory)(".editorconfig")])
 	);
