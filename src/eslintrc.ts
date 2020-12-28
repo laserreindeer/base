@@ -1,3 +1,5 @@
+/* eslint-disable max-lines */
+
 import type { Linter } from "eslint";
 
 /**
@@ -94,31 +96,137 @@ export const eslint: Linter.Config = {
 		"array-callback-return": "error",
 		"arrow-body-style": ["error", "as-needed"],
 		"arrow-parens": ["error", "as-needed"],
+		// This plugin gives false positives (it doesn't have type information).
 		"ban/ban": [
 			"warn",
+			// Array
 			{
-				message: "Use spread instead, like [...array, ...otherArray].",
+				message: "Use `[item1, itemN]` instead.",
+				name: ["*", "of"]
+			},
+			{
+				message: "Use `[...array, ...otherArray]` instead.",
 				name: ["*", "concat"]
 			},
 			{
-				message: "Use slice instead.",
+				message: "Use `Array.prototype.slice` and spread instead.",
+				name: ["*", "copyWithin"]
+			},
+			{
+				message: "Use `Array.prototype.map` instead.",
+				name: ["*", "fill"]
+			},
+			{
+				message: "Use `Array.prototype.map` instead.",
+				name: ["*", "forEach"]
+			},
+			{
+				message:
+					"Use `Object.entries` and `Array.prototype.map` instead.",
+				name: ["*", "keys"]
+			},
+			{
+				message: "Use `Array.prototype.slice` instead.",
 				name: ["*", "pop"]
 			},
 			{
-				message: "Use slice instead.",
-				name: ["*", "shift"]
-			},
-			{
-				message: "Use slice instead.",
-				name: ["*", "splice"]
-			},
-			{
-				message: "Use spread instead, like [...array, newItem].",
+				message: "Use spread instead `[...array, item]`.",
 				name: ["*", "push"]
 			},
 			{
-				message: "Use spread instead, like [newItem, ...array].",
+				message: "Use `Array.prototype.slice` instead.",
+				name: ["*", "shift"]
+			},
+			{
+				message: "Use `Array.prototype.slice` instead.",
+				name: ["*", "splice"]
+			},
+			{
+				message: "Use spread instead `[item, ...array]`.",
 				name: ["*", "unshift"]
+			},
+			{
+				message: "Use `Array.prototype.map` instead.",
+				name: ["*", "values"]
+			},
+			// Function
+			{
+				message:
+					"Call the function directly. Use spread for arguments.",
+				name: ["*", "apply"]
+			},
+			{
+				message: "Make a curried function instead",
+				name: ["*", "bind"]
+			},
+			{
+				message:
+					"Call the function directly. Use spread for arguments.",
+				name: ["*", "call"]
+			},
+			// Object
+			{
+				message: "Use spread instead `{ ...object1, ...object2 }`.",
+				name: ["*", "assign"]
+			},
+			// Object
+			{
+				message: "Use `{}` instead.",
+				name: ["*", "create"]
+			},
+			{
+				message: "Avoid mutations.",
+				name: ["*", "freeze"]
+			},
+			{
+				message: "Use `Object.keys` or `Object.entries` instead.",
+				name: ["*", "getOwnPropertyNames"]
+			},
+			{
+				message: "Avoid using classes and prototypes.",
+				name: ["*", "getPrototypeOf"]
+			},
+			{
+				message: "Avoid mutations.",
+				name: ["*", "isExtensible"]
+			},
+			{
+				message: "Avoid mutations.",
+				name: ["*", "isFrozen"]
+			},
+			{
+				message: "Avoid mutations.",
+				name: ["*", "isSealed"]
+			},
+			{
+				message: "Avoid mutations.",
+				name: ["*", "preventExtension"]
+			},
+			{
+				message: "Avoid mutations.",
+				name: ["*", "seal"]
+			},
+			{
+				message: "Avoid using classes and prototypes.",
+				name: ["*", "setPrototypeOf"]
+			},
+			// Math
+			{
+				message: "Use the `**` operator instead.",
+				name: ["*", "pow"]
+			},
+			// Date
+			{
+				message: "Use `Date.prototype.getFullYear` instead.",
+				name: ["*", "getYear"]
+			},
+			{
+				message: "Use `Date.prototype.setFullYear` instead.",
+				name: ["*", "setYear"]
+			},
+			{
+				message: "Use `Date.prototype.toUTCString` instead.",
+				name: ["*", "toGMTString"]
 			}
 		],
 		camelcase: "error",
