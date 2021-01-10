@@ -210,6 +210,10 @@ export const eslint: Linter.Config = {
 				message: "Avoid using classes and prototypes.",
 				name: ["*", "setPrototypeOf"]
 			},
+			{
+				message: "Use a Proxy instead.",
+				name: ["*", "__noSuchMethod__"]
+			},
 			// Math
 			{
 				message: "Use the `**` operator instead.",
