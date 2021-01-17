@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.2.4
+
+- :arrow_up: dependency upgrade.
+- :wrench: update eslint configuration with `max-params` rule.
+
 ## 4.2.3
 
 - :arrow_up: dependency upgrade.
