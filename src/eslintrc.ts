@@ -169,7 +169,6 @@ export const eslint: Linter.Config = {
 				message: "Use spread instead `{ ...object1, ...object2 }`.",
 				name: ["*", "assign"]
 			},
-			// Object
 			{
 				message: "Use `{}` instead.",
 				name: ["*", "create"]
@@ -229,8 +228,25 @@ export const eslint: Linter.Config = {
 				name: ["*", "setYear"]
 			},
 			{
+				message: "USe `Date.prototype.toLocaleDateString` instead.",
+				name: ["*", "toDateString"]
+			},
+			{
+				message: "USe `Date.prototype.toLocaleTimeString` instead.",
+				name: ["*", "toTimeString"]
+			},
+			{
 				message: "Use `Date.prototype.toUTCString` instead.",
 				name: ["*", "toGMTString"]
+			},
+			// String
+			{
+				message: "Use `String.prototype.toLocaleLowerCase` instead.",
+				name: ["*", "toLowerCase"]
+			},
+			{
+				message: "Use `String.prototype.toLocaleUpperCase` instead.",
+				name: ["*", "toUpperCase"]
 			}
 		],
 		camelcase: "error",
