@@ -1,7 +1,7 @@
 {
   "name": "@vangware/base",
   "description": "🏗️ Vangware base configurations",
-  "version": "4.2.7",
+  "version": "4.3.0",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -21,7 +21,7 @@
     "@types/stylelint": "^9.10.1",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
-    "eslint": "^7.18.0",
+    "eslint": "^7.19.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-plugin-ban": "^1.5.2",

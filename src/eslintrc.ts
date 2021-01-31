@@ -21,6 +21,7 @@ export const eslint: Linter.Config = {
 	parser: "@typescript-eslint/parser",
 	parserOptions: {
 		ecmaVersion: 2018,
+		extraFileExtensions: [".cjs", ".mjs"],
 		project: "tsconfig.json",
 		sourceType: "module"
 	},
