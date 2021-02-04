@@ -1,8 +1,13 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": true,
+    "checkJs": true,
     "declaration": true,
+    "extendedDiagnostics": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "listEmittedFiles": true,
+    "importsNotUsedAsValues": "error",
     "module": "CommonJS",
     "moduleResolution": "node",
     "newLine": "LF",
@@ -14,7 +19,7 @@
     "preserveConstEnums": true,
     "resolveJsonModule": true,
     "strict": true,
-    "target": "ESNext"
+    "target": "ES2019"
   },
   "include": [
     "./src/**/*.ts"

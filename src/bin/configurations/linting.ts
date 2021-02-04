@@ -1,7 +1,7 @@
 import { addDevDependencies } from "../addDevDependencies";
 import { copyFilesRecursivePromise } from "../copyFilesRecursivePromise";
 import { resolveConfigurationsPath, targetDirectoryResolve } from "../paths";
-import { Configuration } from "./Configuration";
+import type { Configuration } from "./Configuration";
 
 export const linting: Configuration = targetDirectory =>
 	addDevDependencies([

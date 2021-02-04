@@ -1,8 +1,8 @@
 #! /usr/bin/env node
 
 import { sep } from "path";
-import * as prompts from "prompts";
-import { Configuration } from "./configurations/Configuration";
+import prompts from "prompts";
+import type { Configuration } from "./configurations/Configuration";
 import { css } from "./configurations/css";
 import { documents } from "./configurations/documents";
 import { editorconfig } from "./configurations/editorconfig";
