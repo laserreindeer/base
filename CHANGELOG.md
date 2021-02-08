@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.3.2
+
+- :arrow_up: dependency upgrade.
+- :wrench: `husky` is now locked to version 4 until the configuration for the current version is better.
+
 ## 4.3.1
 
 - :arrow_up: dependency upgrade.
