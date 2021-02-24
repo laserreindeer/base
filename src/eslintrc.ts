@@ -14,9 +14,9 @@ export const eslint: Linter.Config = {
 	extends: [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
-		"prettier/@typescript-eslint",
+		"plugin:functional/recommended",
 		"plugin:prettier/recommended",
-		"plugin:functional/recommended"
+		"prettier/prettier"
 	],
 	parser: "@typescript-eslint/parser",
 	parserOptions: {
