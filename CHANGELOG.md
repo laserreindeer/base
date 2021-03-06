@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.4.0
+
+- :arrow_up: dependency upgrade.
+- :wrench: Change `@typescript-eslint/array-type` config from `"array"` to `"generic"`.
+- :building_construction: update the code matching the new linting.
+
 ## 4.3.7
 
 - :arrow_up: dependency upgrade.

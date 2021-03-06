@@ -35,7 +35,12 @@ export const eslint: Linter.Config = {
 	],
 	rules: {
 		"@typescript-eslint/adjacent-overload-signatures": "error",
-		"@typescript-eslint/array-type": "error",
+		"@typescript-eslint/array-type": [
+			"error",
+			{
+				default: "generic"
+			}
+		],
 		"@typescript-eslint/ban-types": "error",
 		"@typescript-eslint/consistent-type-assertions": "off",
 		"@typescript-eslint/consistent-type-definitions": ["error", "type"],

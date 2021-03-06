@@ -4,7 +4,7 @@ import { basePackagePath, cwdPackagePath } from "./paths";
 import { sortObject } from "./sortObject";
 import { updateJSONPromise } from "./updateJSONPromise";
 
-export const addDevDependencies = (packages: readonly string[]) =>
+export const addDevDependencies = (packages: ReadonlyArray<string>) =>
 	readFile(basePackagePath, "utf8")
 		.then(JSON.parse)
 		.then(({ devDependencies, version }: Package) =>

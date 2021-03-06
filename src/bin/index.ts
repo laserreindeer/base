@@ -12,6 +12,7 @@ import { vscode } from "./configurations/vscode";
 import { basePath, cwd } from "./paths";
 import { promiseAllSequential } from "./promiseAllSequential";
 
+// eslint-disable-next-line max-params
 export default new Promise((resolveDirectory, rejectDirectory) =>
 	cwd !== basePath
 		? resolveDirectory(undefined)
@@ -40,7 +41,7 @@ export default new Promise((resolveDirectory, rejectDirectory) =>
 				({
 					selected = []
 				}: {
-					readonly selected: readonly Configuration[];
+					readonly selected: ReadonlyArray<Configuration>;
 				}) => promiseAllSequential(cwd)(selected)
 			)
 			.then((copiedData = []) =>
@@ -52,7 +53,7 @@ export default new Promise((resolveDirectory, rejectDirectory) =>
 					)
 			)
 	)
-	.then((messages: readonly string[]) =>
+	.then((messages: ReadonlyArray<string>) =>
 		messages.map(message => console.log(message))
 	)
 	.catch(console.error);

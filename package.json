@@ -1,7 +1,7 @@
 {
   "name": "@vangware/base",
   "description": "🏗️ Vangware base configurations",
-  "version": "4.3.7",
+  "version": "4.4.0",
   "author": {
     "name": "Vangware",
     "url": "https://vangware.com"
@@ -34,7 +34,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
-    "stylelint": "^13.11.0",
+    "stylelint": "^13.12.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.2.0",
