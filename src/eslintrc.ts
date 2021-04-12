@@ -360,10 +360,6 @@ export const eslint: Linter.Config = {
 				name: ["*", "of"]
 			},
 			{
-				message: "Use `[...array, ...otherArray]` instead.",
-				name: ["*", "concat"]
-			},
-			{
 				message: "Use `Array.prototype.slice` and spread instead.",
 				name: ["*", "copyWithin"]
 			},
