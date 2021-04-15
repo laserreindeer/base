@@ -1,10 +1,8 @@
 {
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "module": "ESNext",
-    "outDir": "./esm"
-  },
-  "exclude": [
-    "./src/bin"
-  ]
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"module": "ESNext",
+		"outDir": "./esm"
+	},
+	"exclude": ["./src/bin"]
 }
