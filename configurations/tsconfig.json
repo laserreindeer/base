@@ -9,7 +9,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"importsNotUsedAsValues": "error",
 		"module": "CommonJS",
-		"moduleResolution": "node",
+		"moduleResolution": "Node",
 		"newLine": "LF",
 		"noEmitOnError": true,
 		"noUncheckedIndexedAccess": true,
