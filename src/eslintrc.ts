@@ -255,6 +255,8 @@ export const eslint: Linter.Config = {
 		"@typescript-eslint/no-unnecessary-type-assertion": "error",
 		// Don't do `extends any` or `extends unknown`. That's the default.
 		"@typescript-eslint/no-unnecessary-type-constraint": "error",
+		// Disallows calling an function with an `any` type value.
+		"@typescript-eslint/no-unsafe-argument": "error",
 		// Avoid `any` assignments.
 		"@typescript-eslint/no-unsafe-assignment": "error",
 		// Avoid calling `any`.
