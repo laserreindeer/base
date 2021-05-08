@@ -5,13 +5,15 @@ import type { Configuration } from "./Configuration";
 
 export const documents: Configuration = targetDirectory =>
 	addDevDependencies([]).then(_ =>
-		copyFilesRecursivePromise([
-			resolveConfigurationsPath("LICENSE"),
-			resolveConfigurationsPath("CHANGELOG.md"),
-			resolveConfigurationsPath("README.md")
-		])([
-			targetDirectoryResolve(targetDirectory)("LICENSE"),
-			targetDirectoryResolve(targetDirectory)("CHANGELOG.md"),
-			targetDirectoryResolve(targetDirectory)("README.md")
-		])
+		copyFilesRecursivePromise({
+			[resolveConfigurationsPath("LICENSE")]: targetDirectoryResolve(
+				targetDirectory
+			)("LICENSE"),
+			[resolveConfigurationsPath("CHANGELOG.md")]: targetDirectoryResolve(
+				targetDirectory
+			)("CHANGELOG.md"),
+			[resolveConfigurationsPath("README.md")]: targetDirectoryResolve(
+				targetDirectory
+			)("README.md")
+		})
 	);

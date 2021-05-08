@@ -22,15 +22,15 @@ export const linting: Configuration = targetDirectory =>
 		"prettier",
 		"typescript"
 	]).then(_ =>
-		copyFilesRecursivePromise([
-			resolveConfigurationsPath("tsconfig.json"),
-			resolveConfigurationsPath("_eslintrc.js"),
-			resolveConfigurationsPath("_prettierignore"),
-			resolveConfigurationsPath("_prettierrc.js")
-		])([
-			targetDirectoryResolve(targetDirectory)("tsconfig.json"),
-			targetDirectoryResolve(targetDirectory)(".eslintrc.js"),
-			targetDirectoryResolve(targetDirectory)(".prettierignore"),
-			targetDirectoryResolve(targetDirectory)(".prettierrc.js")
-		])
+		copyFilesRecursivePromise({
+			[resolveConfigurationsPath(
+				"tsconfig.json"
+			)]: targetDirectoryResolve(targetDirectory)("tsconfig.json"),
+			[resolveConfigurationsPath("_eslintrc.js")]: targetDirectoryResolve(
+				targetDirectory
+			)(".eslintrc.js"),
+			[resolveConfigurationsPath(
+				"_prettierrc.js"
+			)]: targetDirectoryResolve(targetDirectory)(".prettierrc.js")
+		})
 	);

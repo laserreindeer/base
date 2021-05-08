@@ -5,13 +5,14 @@ import type { Configuration } from "./Configuration";
 
 export const git: Configuration = targetDirectory =>
 	addDevDependencies([]).then(_ =>
-		copyFilesRecursivePromise([
-			resolveConfigurationsPath("_gitignore"),
-			resolveConfigurationsPath("_github/workflows/test.yaml")
-		])([
-			targetDirectoryResolve(targetDirectory)(".gitignore"),
-			targetDirectoryResolve(targetDirectory)(
+		copyFilesRecursivePromise({
+			[resolveConfigurationsPath("_gitignore")]: targetDirectoryResolve(
+				targetDirectory
+			)(".gitignore"),
+			[resolveConfigurationsPath(
+				"_github/workflows/test.yaml"
+			)]: targetDirectoryResolve(targetDirectory)(
 				".github/workflows/test.yaml"
 			)
-		])
+		})
 	);

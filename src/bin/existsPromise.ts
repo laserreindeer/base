@@ -1,10 +1,9 @@
-import type { PathLike } from "fs";
-import { existsSync } from "fs";
-import { promisify } from "util";
+import { constants } from "fs";
+import { access } from "fs/promises";
 
 /** Promised `fs.exists`. */
 export const existsPromise = (filename: string) =>
-	promisify<PathLike, boolean>(existsSync)(filename).then(exists => ({
-		exists,
-		filename
-	}));
+	access(filename, constants.F_OK)
+		.then(_ => true)
+		.catch(_ => false)
+		.then(exists => ({ exists, filename }));

@@ -13,13 +13,12 @@ export const css: Configuration = targetDirectory =>
 		"stylelint-order",
 		"stylelint-prettier"
 	]).then(_ =>
-		copyFilesRecursivePromise([
-			resolveConfigurationsPath("_stylelintrc.js"),
-			resolveConfigurationsPath("_prettierignore"),
-			resolveConfigurationsPath("_prettierrc.js")
-		])([
-			targetDirectoryResolve(targetDirectory)(".stylelintrc.js"),
-			targetDirectoryResolve(targetDirectory)(".prettierignore"),
-			targetDirectoryResolve(targetDirectory)(".prettierrc.js")
-		])
+		copyFilesRecursivePromise({
+			[resolveConfigurationsPath(
+				"_stylelintrc.js"
+			)]: targetDirectoryResolve(targetDirectory)(".stylelintrc.js"),
+			[resolveConfigurationsPath(
+				"_prettierrc.js"
+			)]: targetDirectoryResolve(targetDirectory)(".prettierrc.js")
+		})
 	);

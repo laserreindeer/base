@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 4.6.3
+
+-   :bug: fix `fileExists` issue.
+-   :building_construction: change configurations to use a map instead.
+
 ## 4.6.2
 
 -   :wrench: update GitHub actions.
