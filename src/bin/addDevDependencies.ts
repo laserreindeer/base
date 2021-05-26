@@ -14,10 +14,8 @@ export const addDevDependencies = (packages: ReadonlyArray<string>) =>
 					...(targetPackage.devDependencies ?? {}),
 					"@vangware/base": `^${version}`,
 					...Object.fromEntries(
-						Object.entries(
-							devDependencies ?? {}
-						).filter(([packageName]) =>
-							packages.includes(packageName)
+						Object.entries(devDependencies ?? {}).filter(
+							([packageName]) => packages.includes(packageName)
 						)
 					)
 				})

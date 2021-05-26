@@ -7,9 +7,7 @@ import type { Configuration } from "./Configuration";
 export const vscode: Configuration = targetDirectory =>
 	addDevDependencies([]).then(_ =>
 		copyFilesRecursivePromise({
-			[resolve(
-				basePath,
-				".vscode/settings.json"
-			)]: targetDirectoryResolve(targetDirectory)(".vscode/settings.json")
+			[resolve(basePath, ".vscode/settings.json")]:
+				targetDirectoryResolve(targetDirectory)(".vscode/settings.json")
 		})
 	);

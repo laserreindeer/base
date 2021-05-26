@@ -14,11 +14,9 @@ export const css: Configuration = targetDirectory =>
 		"stylelint-prettier"
 	]).then(_ =>
 		copyFilesRecursivePromise({
-			[resolveConfigurationsPath(
-				"_stylelintrc.js"
-			)]: targetDirectoryResolve(targetDirectory)(".stylelintrc.js"),
-			[resolveConfigurationsPath(
-				"_prettierrc.js"
-			)]: targetDirectoryResolve(targetDirectory)(".prettierrc.js")
+			[resolveConfigurationsPath("_stylelintrc.js")]:
+				targetDirectoryResolve(targetDirectory)(".stylelintrc.js"),
+			[resolveConfigurationsPath("_prettierrc.js")]:
+				targetDirectoryResolve(targetDirectory)(".prettierrc.js")
 		})
 	);

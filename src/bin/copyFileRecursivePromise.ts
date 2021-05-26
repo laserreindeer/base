@@ -6,7 +6,8 @@ import { existsPromise } from "./existsPromise";
  * Copies a file in a recursively created directory (if it doesn't exists).
  * @param source Source path of the file to be copied.
  */
-export const copyFileRecursivePromise = (source: string) =>
+export const copyFileRecursivePromise =
+	(source: string) =>
 	/**
 	 * @param target Target path of the file to be copied.
 	 */

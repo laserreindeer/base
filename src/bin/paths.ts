@@ -20,6 +20,6 @@ export const resolveConfigurationsPath = (filename: string) =>
 	resolve(configurationsPath, filename);
 
 /** Curried target directory resolve */
-export const targetDirectoryResolve = (targetDirectory: string) => (
-	path: string
-) => resolve(targetDirectory, path);
+export const targetDirectoryResolve =
+	(targetDirectory: string) => (path: string) =>
+		resolve(targetDirectory, path);

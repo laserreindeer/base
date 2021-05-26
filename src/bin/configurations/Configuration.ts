@@ -1,5 +1,6 @@
-export type Configuration = (
-	targetDirectory: string
-) => Promise<
-	ReadonlyArray<{ readonly source: string; readonly target: string }>
+export type Configuration = (targetDirectory: string) => Promise<
+	ReadonlyArray<{
+		readonly source: string;
+		readonly target: string;
+	}>
 >;
