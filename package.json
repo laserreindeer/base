@@ -1,7 +1,7 @@
 {
 	"name": "@vangware/base",
 	"description": "🏗️ Vangware base configurations",
-	"version": "4.7.1",
+	"version": "4.7.2",
 	"author": {
 		"name": "Vangware",
 		"url": "https://vangware.com"
@@ -14,14 +14,14 @@
 		"prompts": "^2.4.1"
 	},
 	"devDependencies": {
-		"@types/eslint": "7.2.12",
-		"@types/node": "15.6.1",
+		"@types/eslint": "7.2.13",
+		"@types/node": "15.12.1",
 		"@types/prettier": "^2.2.3",
 		"@types/prompts": "2.0.12",
 		"@types/stylelint": "13.13.0",
 		"@typescript-eslint/eslint-plugin": "4.26.0",
 		"@typescript-eslint/parser": "4.26.0",
-		"eslint": "7.27.0",
+		"eslint": "7.28.0",
 		"eslint-config-prettier": "8.3.0",
 		"eslint-import-resolver-node": "^0.3.4",
 		"eslint-plugin-ban": "^1.5.2",
