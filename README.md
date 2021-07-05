@@ -1,4 +1,4 @@
-![Vangware's Base logo](https://i.imgur.com/xQqlmq5.png)
+<img alt="Vangware's Base logo" src="./logo.svg" height="192" />
 
 ![License](https://img.shields.io/npm/l/@vangware/base.svg?style=for-the-badge&labelColor=666&color=2b7&link=https://github.com/vangware/base/blob/main/LICENSE)
 ![NPM Version](https://img.shields.io/npm/v/@vangware/base.svg?style=for-the-badge&labelColor=666&color=2b7&link=https://npm.im/@vangware/base)
