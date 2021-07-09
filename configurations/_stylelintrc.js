@@ -1,1 +1,1 @@
-module.exports = require("@vangware/base").stylelint;
+module.exports = require("@laserreindeer/base").stylelint;

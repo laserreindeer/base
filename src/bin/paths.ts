@@ -1,6 +1,6 @@
 import { resolve } from "path";
 
-/** @vangware/base installation path */
+/** @laserreindeer/base installation path */
 export const basePath = resolve(__dirname, "../..");
 
 /** Configuration files path */
@@ -12,7 +12,7 @@ export const cwd = process.cwd();
 /** Current working directory package.json file */
 export const cwdPackagePath = resolve(cwd, "package.json");
 
-/** @vangware/base package.json file */
+/** @laserreindeer/base package.json file */
 export const basePackagePath = resolve(basePath, "package.json");
 
 /** Resolver for configurationsPath */

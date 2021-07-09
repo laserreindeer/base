@@ -1,1 +1,1 @@
-# @vangware/project-name
+# @laserreindeer/project-name

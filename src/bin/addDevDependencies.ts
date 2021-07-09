@@ -12,7 +12,7 @@ export const addDevDependencies = (packages: ReadonlyArray<string>) =>
 				...targetPackage,
 				devDependencies: sortObject({
 					...(targetPackage.devDependencies ?? {}),
-					"@vangware/base": `^${version}`,
+					"@laserreindeer/base": `^${version}`,
 					...Object.fromEntries(
 						Object.entries(devDependencies ?? {}).filter(
 							([packageName]) => packages.includes(packageName)

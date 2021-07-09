@@ -13,11 +13,12 @@ export const linting: Configuration = targetDirectory =>
 		"eslint-config-prettier",
 		"eslint-import-resolver-node",
 		"eslint-plugin-ban",
-		"eslint-plugin-functional",
 		"eslint-plugin-import",
 		"eslint-plugin-no-null",
 		"eslint-plugin-prefer-arrow",
 		"eslint-plugin-prettier",
+		"eslint-plugin-react-hooks",
+		"eslint-plugin-react",
 		"eslint",
 		"prettier",
 		"typescript"

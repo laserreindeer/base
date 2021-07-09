@@ -14,12 +14,16 @@ export const eslint: Linter.Config = {
 	extends: [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
-		"plugin:functional/recommended",
 		"plugin:prettier/recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:react/recommended",
 		"prettier/prettier"
 	],
 	parser: "@typescript-eslint/parser",
 	parserOptions: {
+		ecmaFeatures: {
+			jsx: true
+		},
 		ecmaVersion: 2018,
 		extraFileExtensions: [".cjs", ".mjs"],
 		project: "tsconfig.json",
@@ -31,7 +35,7 @@ export const eslint: Linter.Config = {
 		"eslint-plugin-import",
 		"eslint-plugin-no-null",
 		"eslint-plugin-prefer-arrow",
-		"eslint-plugin-functional"
+		"react"
 	],
 	rules: {
 		// Grouping overloaded members together to improve readability.
@@ -645,5 +649,10 @@ export const eslint: Linter.Config = {
 		"spaced-comment": "error",
 		"wrap-iife": ["error", "inside"],
 		yoda: "error"
+	},
+	settings: {
+		react: {
+			version: "latest"
+		}
 	}
 };

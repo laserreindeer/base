@@ -1,11 +1,9 @@
-<img alt="Vangware's Base logo" src="./logo.svg" height="192" />
+![License](https://img.shields.io/npm/l/@laserreindeer/base.svg?style=for-the-badge&labelColor=666&color=2b7&link=https://github.com/laserreindeer/base/blob/main/LICENSE)
+![NPM Version](https://img.shields.io/npm/v/@laserreindeer/base.svg?style=for-the-badge&labelColor=666&color=2b7&link=https://npm.im/@laserreindeer/base)
+![Open Issues](https://img.shields.io/github/issues/laserreindeer/base.svg?style=for-the-badge&labelColor=666&color=2b7&link=https://github.com/laserreindeer/base/issues)
+![Size](https://img.shields.io/bundlephobia/minzip/@laserreindeer/base.svg?style=for-the-badge&labelColor=666&color=2b7&label=size&link=https://bundlephobia.com/result?p=@laserreindeer/base)
 
-![License](https://img.shields.io/npm/l/@vangware/base.svg?style=for-the-badge&labelColor=666&color=2b7&link=https://github.com/vangware/base/blob/main/LICENSE)
-![NPM Version](https://img.shields.io/npm/v/@vangware/base.svg?style=for-the-badge&labelColor=666&color=2b7&link=https://npm.im/@vangware/base)
-![Open Issues](https://img.shields.io/github/issues/vangware/base.svg?style=for-the-badge&labelColor=666&color=2b7&link=https://github.com/vangware/base/issues)
-![Size](https://img.shields.io/bundlephobia/minzip/@vangware/base.svg?style=for-the-badge&labelColor=666&color=2b7&label=size&link=https://bundlephobia.com/result?p=@vangware/base)
-
-🏗️ [Vangware](https://vangware.com) base configurations.
+🏗️ [Laser Reindeer](https://laserreindeer.com) base configurations.
 
 ## Configurations
 
@@ -19,6 +17,6 @@
 ## Installation
 
 ```bash
-npx @vangware/base # Select configurations to install
+npx @laserreindeer/base # Select configurations to install
 npm i # And then run install
 ```
