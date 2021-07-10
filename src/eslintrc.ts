@@ -642,6 +642,34 @@ export const eslint: Linter.Config = {
 		"prefer-template": "error",
 		"quote-props": ["error", "as-needed"],
 		radix: "error",
+		"react/button-has-type": "error",
+		"react/function-component-definition": [
+			"error",
+			{
+				namedComponents: "arrow-function",
+				unnamedComponents: "arrow-function"
+			}
+		],
+		"react/jsx-boolean-value": ["error", "never"],
+		"react/jsx-curly-brace-presence": "error",
+		"react/jsx-fragments": ["error", "syntax"],
+		"react/jsx-handler-names": "error",
+		"react/jsx-max-depth": ["error", { max: 3 }],
+		"react/jsx-no-constructed-context-values": "error",
+		"react/jsx-no-script-url": "error",
+		"react/jsx-no-target-blank": "error",
+		"react/jsx-no-useless-fragment": "error",
+		"react/jsx-pascal-case": "error",
+		"react/jsx-sort-props": "error",
+		"react/no-array-index-key": "error",
+		"react/no-children-prop": "off",
+		"react/no-danger": "error",
+		"react/no-multi-comp": "error",
+		"react/no-this-in-sfc": "error",
+		"react/no-unsafe": "error",
+		"react/no-unstable-nested-components": "error",
+		"react/prefer-es6-class": ["error", "never"],
+		"react/prefer-stateless-function": "error",
 		"require-await": "off", // Checked by TS
 		"require-unicode-regexp": "error",
 		"sort-keys": "error",
@@ -652,7 +680,7 @@ export const eslint: Linter.Config = {
 	},
 	settings: {
 		react: {
-			version: "latest"
+			version: "17"
 		}
 	}
 };

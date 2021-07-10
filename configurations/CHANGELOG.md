@@ -5,4 +5,4 @@ This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
 ## 1.0.0
 
-- :sparkles: Initial commit.
+-   :sparkles: Initial commit.
