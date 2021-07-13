@@ -546,7 +546,7 @@ export const eslint: Linter.Config = {
 			}
 		],
 		"max-lines": ["error", 300],
-		"max-params": ["error", 1],
+		"max-params": ["warn", 1],
 		"new-parens": "error",
 		"newline-per-chained-call": "off",
 		"no-alert": "error",
