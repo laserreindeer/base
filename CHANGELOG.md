@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 This project uses [Gitmoji](https://gitmoji.carloscuesta.me/)
 
+## 1.0.3
+
+-   :wrench: `react/react-in-jsx-scope` now is `off` because it's checked by TS.
+-   :wrench: update `tsconfig.json` so it uses symbolic links correctly.
+-   :arrow_up: dependency upgrade.
+
 ## 1.0.2
 
 -   :wrench: `max-params` now is only a `warn`.

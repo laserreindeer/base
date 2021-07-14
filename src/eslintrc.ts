@@ -670,6 +670,7 @@ export const eslint: Linter.Config = {
 		"react/no-unstable-nested-components": "error",
 		"react/prefer-es6-class": ["error", "never"],
 		"react/prefer-stateless-function": "error",
+		"react/react-in-jsx-scope": "off", // Checked by TS
 		"require-await": "off", // Checked by TS
 		"require-unicode-regexp": "error",
 		"sort-keys": "error",

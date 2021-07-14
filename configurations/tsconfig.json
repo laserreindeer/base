@@ -18,6 +18,7 @@
 		"noUnusedParameters": true,
 		"outDir": "./dist",
 		"preserveConstEnums": true,
+		"preserveSymlinks": true,
 		"resolveJsonModule": true,
 		"strict": true,
 		"target": "ES2019"
