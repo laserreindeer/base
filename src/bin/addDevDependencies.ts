@@ -1,4 +1,4 @@
-import { readFile } from "fs/promises";
+import { readFile } from "node:fs/promises";
 import type { Package } from "./Package";
 import { basePackagePath, cwdPackagePath } from "./paths";
 import { sortObject } from "./sortObject";

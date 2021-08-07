@@ -1,5 +1,5 @@
-import { copyFile, mkdir } from "fs/promises";
-import { dirname } from "path";
+import { copyFile, mkdir } from "node:fs/promises";
+import { dirname } from "node:path";
 import { existsPromise } from "./existsPromise";
 
 /**

@@ -1,0 +1,10 @@
+pre-push:
+    commands:
+        clean:
+            run: rimraf ./dist
+        compile-import:
+            run: tsc --project ./tsconfig.import.json
+        compile-require:
+            run: tsc --project ./tsconfig.json
+        lint:
+            run: eslint ./src/*.ts

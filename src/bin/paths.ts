@@ -1,4 +1,4 @@
-import { resolve } from "path";
+import { resolve } from "node:path";
 
 /** @laserreindeer/base installation path */
 export const basePath = resolve(__dirname, "../..");

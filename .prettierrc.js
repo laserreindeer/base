@@ -1,1 +1,1 @@
-module.exports = require("./cjs").prettier;
+module.exports = require("./dist/require").prettier;

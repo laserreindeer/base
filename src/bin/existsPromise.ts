@@ -1,5 +1,5 @@
-import { constants } from "fs";
-import { access } from "fs/promises";
+import { constants } from "node:fs";
+import { access } from "node:fs/promises";
 
 /** Promised `fs.exists`. */
 export const existsPromise = (filename: string) =>

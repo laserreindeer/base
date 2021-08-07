@@ -1,4 +1,4 @@
-import { resolve } from "path";
+import { resolve } from "node:path";
 import { addDevDependencies } from "../addDevDependencies";
 import { copyFilesRecursivePromise } from "../copyFilesRecursivePromise";
 import { basePath, targetDirectoryResolve } from "../paths";

@@ -149,8 +149,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # Build
-cjs
-esm
-dist
+dist/
 dist-ssr
 *.local
