@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-import { sep } from "path";
+import { sep } from "node:path";
 import prompts from "prompts";
 import type { Configuration } from "./configurations/Configuration";
 import { css } from "./configurations/css";
@@ -16,7 +16,9 @@ import { promiseAllSequential } from "./promiseAllSequential";
 export default new Promise((resolveDirectory, rejectDirectory) =>
 	cwd !== basePath
 		? resolveDirectory(undefined)
-		: rejectDirectory("Don't run this script in @laserreindeer/base's directory")
+		: rejectDirectory(
+				"Don't run this script in @laserreindeer/base's directory"
+		  )
 )
 	.then(_ =>
 		prompts({

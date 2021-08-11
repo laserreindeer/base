@@ -1,1 +1,1 @@
-module.exports = require("./cjs").eslint;
+module.exports = require("./dist/require").eslint;

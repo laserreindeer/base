@@ -1,37 +1,35 @@
 {
 	"name": "@laserreindeer/base",
 	"description": "🏗️ Laser Reindeer base configurations",
-	"version": "1.0.3",
+	"version": "1.1.0",
 	"author": {
 		"name": "Laser Reindeer",
 		"url": "https://laserreindeer.com"
 	},
-	"bin": "./cjs/bin/index.js",
-	"bugs": {
-		"url": "https://github.com/laserreindeer/base/issues"
-	},
+	"bin": "./dist/require/bin/index.js",
+	"bugs": "https://github.com/laserreindeer/base/issues",
 	"dependencies": {
 		"prompts": "^2.4.1"
 	},
 	"devDependencies": {
+		"@arkweid/lefthook": "^0.7.6",
 		"@types/eslint": "7.28.0",
-		"@types/node": "16.3.2",
+		"@types/node": "16.4.13",
 		"@types/prettier": "^2.3.2",
 		"@types/prompts": "2.0.14",
 		"@types/stylelint": "13.13.1",
-		"@typescript-eslint/eslint-plugin": "4.28.3",
-		"@typescript-eslint/parser": "4.28.3",
-		"eslint": "7.30.0",
+		"@typescript-eslint/eslint-plugin": "4.29.1",
+		"@typescript-eslint/parser": "4.29.1",
+		"eslint": "7.32.0",
 		"eslint-config-prettier": "8.3.0",
-		"eslint-import-resolver-node": "^0.3.4",
+		"eslint-import-resolver-node": "^0.3.5",
 		"eslint-plugin-ban": "^1.5.2",
-		"eslint-plugin-import": "2.23.4",
+		"eslint-plugin-import": "2.24.0",
 		"eslint-plugin-no-null": "^1.0.2",
 		"eslint-plugin-prefer-arrow": "^1.2.3",
 		"eslint-plugin-prettier": "^3.4.0",
 		"eslint-plugin-react": "^7.24.0",
 		"eslint-plugin-react-hooks": "^4.2.0",
-		"husky": "4.3.8",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.3.2",
 		"rimraf": "^3.0.2",
@@ -42,16 +40,13 @@
 		"typescript": "4.3.5"
 	},
 	"exports": {
-		".": {
-			"import": "./esm/index.js",
-			"require": "./cjs/index.js"
-		}
+		"import": "./dist/import/index.js",
+		"require": "./dist/require/index.js"
 	},
 	"files": [
 		".vscode",
-		"cjs",
 		"configurations",
-		"esm"
+		"dist"
 	],
 	"homepage": "https://github.com/laserreindeer/base#readme",
 	"husky": {
@@ -79,22 +74,15 @@
 		"laserreindeer"
 	],
 	"license": "MIT",
-	"main": "./cjs/index.js",
-	"module": "./esm/index.js",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/laserreindeer/base.git"
-	},
+	"repository": "laserreindeer/base",
 	"scripts": {
-		"clean": "rimraf ./{cjs,esm}",
+		"clean": "rimraf ./dist",
 		"compile": "run-s compile:*",
-		"compile:cjs": "tsc --project ./tsconfig.json",
-		"compile:esm": "tsc --project ./tsconfig.esm.json",
+		"compile:require": "tsc --project ./tsconfig.json",
+		"compile:import": "tsc --project ./tsconfig.import.json",
 		"lint": "eslint ./src/*.ts",
-		"postpublish": "run-s clean",
 		"prepublishOnly": "run-s clean compile prettify",
-		"prettify": "prettier --write --loglevel warn './{cjs,esm}/**/*.{js,ts}'"
+		"prettify": "prettier --write --loglevel warn './dist/**/*.{js,ts}'"
 	},
-	"source": "./src/index.ts",
-	"types": "./cjs/index.d.ts"
+	"types": "./dist/require/index.d.ts"
 }
